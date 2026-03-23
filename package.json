@@ -19,7 +19,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@microlink/react-json-view": "^1.31.11",
+    "@microlink/react-json-view": "^1.31.14",
     "@octokit/auth-app": "^8.2.0",
     "@vercel/analytics": "^2.0.1",
     "color-interpolate": "^2.0.0",
