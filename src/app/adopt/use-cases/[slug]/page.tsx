@@ -8,7 +8,7 @@ import { MarkdownComponent } from '@/components/NamedMarkdownPage/MarkdownConten
 import Image from 'next/image'
 import GettingStarted from '../_components/getting-started'
 import styles from './page.module.css'
-import Feedback from '../_components/feedback'
+//import Feedback from '../_components/feedback'
 import { CSSProperties } from 'react'
 
 const contentFilePath = 'adopt/use-cases'
@@ -66,9 +66,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-      <section>
+      {/* <section>
         <Feedback />
-      </section>
+      </section> */}
       <section style={headerStyle}>
         <MarkdownComponent html={content} />
       </section>
