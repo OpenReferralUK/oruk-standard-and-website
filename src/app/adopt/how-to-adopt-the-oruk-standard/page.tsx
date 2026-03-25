@@ -4,7 +4,7 @@ import { MarkdownComponent } from '@/components/NamedMarkdownPage/MarkdownConten
 import { getMarkdownData } from '@/utilities/markdown'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next/types'
-import Feedback from '../use-cases/_components/feedback'
+//import Feedback from '../use-cases/_components/feedback'
 import styles from './page.module.css'
 import { PageMargin } from '@/components/PageMargin'
 
@@ -32,9 +32,6 @@ export default async function Page() {
 
   return (
     <PageMargin>
-      <section>
-        <Feedback />
-      </section>
       <section>
         <Columns
           layout='42'

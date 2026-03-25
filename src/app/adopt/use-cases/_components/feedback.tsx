@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import styles from './feedback.module.css'
-import { FaRegComment } from 'react-icons/fa6'
+//import Link from 'next/link'
+//import styles from './feedback.module.css'
+//import { FaRegComment } from 'react-icons/fa6'
 
-export default function Feedback() {
+/*export default function Feedback() {
   return (
     <div className={styles.feedbackContainer}>
       <h1 className={styles.newPageText}>This is a new page</h1>
@@ -13,3 +13,4 @@ export default function Feedback() {
     </div>
   )
 }
+*/
