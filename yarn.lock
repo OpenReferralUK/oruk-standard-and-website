@@ -695,10 +695,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@microlink/react-json-view@^1.31.14":
-  version "1.31.14"
-  resolved "https://registry.yarnpkg.com/@microlink/react-json-view/-/react-json-view-1.31.14.tgz#d6ade438a4913264c7f992e0a169cb70d853e4e0"
-  integrity sha512-DfK7YYPcNL9fYzXsWqbqmkwT+y7/trbXPrMsvY34kw/hPP/TgRiy3IP+cLlQcndft6/kPb/CeA4K7c71u5/drw==
+"@microlink/react-json-view@^1.31.15":
+  version "1.31.15"
+  resolved "https://registry.yarnpkg.com/@microlink/react-json-view/-/react-json-view-1.31.15.tgz#aee399128dcddc17a0e1eeea64748fffca412053"
+  integrity sha512-HSgO8uzwPICgQuU5C9/pV8hhKa4EeQCOlSOWnICR9t1WlJpFXvOiJfWZljbZQvWsTYZdhbHbnkRySMNLXuT0Lg==
   dependencies:
     react-base16-styling "~0.10.0"
     react-lifecycles-compat "~3.0.4"
