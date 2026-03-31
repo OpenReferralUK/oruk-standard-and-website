@@ -42,10 +42,10 @@ export const LandmarkContentInfo = ({
       ) : null}
       <PageMargin>
         <div className={styles.copyright}>
-          Copyright © 2024-5 Open Referral UK. This site is released under the{' '}
+          Copyright © 2024-26 Open Referral UK. This site is released under the{' '}
           <a
             className={styles.break}
-            href='https://github.com/tpximpact/oruk-standard-and-website/blob/main/LICENSE'
+            href='https://github.com/OpenReferralUK/oruk-standard-and-website/blob/main/LICENSE'
           >
             Creative Commons Attribution-ShareAlike 4.0 International Public License
           </a>

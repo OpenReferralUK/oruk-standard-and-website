@@ -1,6 +1,6 @@
 BSD 3-Clause License
 
-Copyright (c) 2025, Open Referral UK
+Copyright (c) 2025-26, Open Referral UK
 All rights reserved.
 
 This website and its associated source code are licensed under the BSD 3-Clause License. This license permits you to freely use, modify, and distribute the code, provided that you comply with the following terms and conditions:
