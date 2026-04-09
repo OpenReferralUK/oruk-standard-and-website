@@ -45,7 +45,7 @@ export const LandmarkContentInfo = ({
           Copyright © 2024-5 Open Referral UK. This site is released under the{' '}
           <a
             className={styles.break}
-            href='https://github.com/tpximpact/oruk-standard-and-website/blob/main/LICENSE'
+            href='https://github.com/OpenReferralUK/oruk-standard-and-website/blob/main/LICENSE'
           >
             Creative Commons Attribution-ShareAlike 4.0 International Public License
           </a>

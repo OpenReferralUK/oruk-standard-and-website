@@ -2,118 +2,159 @@
 modified: '2025-03-22T02:04:54.054Z'
 ---
 
-# Privacy policy
+# ORUK Privacy Notice v1.0
 
-OpenReferralUK.org (or www.OpenReferralUK.org) is provided by TPXimpact Limited (TPX) on behalf of stakeholders in the [Local Digital](https://localdigital.gov.uk/) community of organisations.
+Open Referral UK (ORUK) is committed to protecting your privacy and being transparent about the data we collect. This notice explains what information we collect, how we use it, and your rights regarding your personal data.
 
-**TPXimpact Limited** is the Data Controller. A Data Controller determines how and why personal data is processed.
+## Introduction of Service: What is Open Referral UK (ORUK)?
+
+ORUK data is a standard that gives a consistent way of recording and sharing information about services. In the UK, most public‑sector organisations maintain their own directories of local services, resulting in the same information being duplicated across different agencies within each area. ORUK defines a standard structure to meet this need for a consistent way of gathering and using data. The ORUK data standard is an open standard.
+
+[OpenReferralUK.org](https://OpenReferralUK.org) or [www.OpenReferralUK.org](http:///www.OpenReferralUK.org) is provided by **iStandUK** on behalf of stakeholders in the Local Digital community of organisations, within the Ministry of Housing, Communities and Local Government. 
+
+iStandUK is hosted by Tameside Metropolitan Borough Council (TMBC) and is formally accountable to TMBC. iStandUK is supported by TMBC therefore, data may be processed on our behalf through TMBC’s secure infrastructure. iStandUK has its own governing board, the steering board includes representatives from local authorities, government departments and other representative groups, such as the Local Government Association (LGA), Society for Innovation,Technology and Modernisation (SOCITM) and techUK
+iStandUK is the data controller and a data controller determines how and why personal data is processed.
 
 ## What data we collect
 
 The personal data we collect from you includes:
 
-- Contact information (I.e. email address) when you contact us to ask questions, queries or leave feedback or sign up to our mailing list alerts (including subscription preferences)
-- Your Internet Protocol (IP) address, and details of which version of web browser you used when accessing the site
+We only collect personally identifiable information (PII) when you voluntarily provide it. This typically occurs when you contact us, or register for our services. This may include:
 
-## Cookies
+- Identity Data: Your name and job title
+- Contact Data: Your email address and organisation name.
+- Preference Data: Your subscription preferences for our mailing lists and alerts.
 
-Our website uses cookies. These are small files saved on your phone, tablet or computer when you visit a website. They store information about how you use the website, such as the pages you visit.
+We use this information to respond to your enquiries and where you have provided explicit consent, to send you marketing correspondence or network updates.
 
-The law states that we can store cookies on your device if they are strictly necessary for the operation of this site. These cookies are necessary for the website to function and cannot be switched off in our systems. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. We do not use any other types of cookies for performance or tracking.
+You will only receive marketing correspondence from ORUK if you have opted in to receive it. You have the right to withdraw your consent at any time.
 
-## Why we need your data
+How to opt-out:
+- Click the ‘Unsubscribe’ link found in the footer of any marketing email.
 
-We collect personal data in order to:
+- Email us directly at hello@OpenReferralUK.org to request removal from any - communication groups or networks supported by ORUK
 
-- feature information about people and organisations who are using Open Referral UK when you authorise us to do so
-- test and allow inspection of open data feeds made available to us
-- provide you with information about Open Referral UK resources
-- monitor use of the site to identify security threats
 
-## Our legal basis for processing your data
+## Use of Cookies
 
-The legal basis for processing personal data in relation to site security is our legitimate interests, and the legitimate interests of our users, in ensuring the security and integrity of OpenReferralUK.org.
+### What are cookies?
 
-Our lawful basis for collecting or using personal information is:
+To make our website easier to use, this website stores small text files called ‘cookies’ on your device (computer, tablet, or smartphone). These files contain small amounts of data that help our website recognise you and remember your preferences to improve your browsing experience.
 
-- **Consent:** you have given clear consent for us to process your personal data for a specific purpose. All of your data protection rights may apply.
+### The Information We Collect via Cookies
 
-### What we do with your data
+When you visit our website, you can do so without revealing your identity. However, to ensure the security and performance of our site, our servers and services automatically collect certain technical information.
 
-The data we collect may be shared with our sub-contractors and with public bodies who sponsor or manage Open Referral UK. It may also be shared with our technology suppliers, for example our hosting provider.
+This information is processed under our legitimate interests to measure site usage, improve content and maintain the technical integrity of our digital services. This data is generally aggregated and does not identify you personally.
 
-We will not:
 
-- sell or rent your data to third parties
-- share your data with third parties for marketing purposes
-- use your data in analytics
+### How we use cookies
 
-We will share your data if we are required to do so by law - for example, by court order, or to prevent fraud or other crime.
+We categorise our cookies into two main types:
 
-## How long we keep your data
+- Strictly Necessary Cookies: These are essential for the website to function. They enable core features such as security, network management and accessibility. You can set your browser to block these cookies, but some parts of the site may not function correctly as a result. These cookies do not store any personally identifiable information.
 
-We will only retain your personal data for as long as:
+What is collected:
 
-- it is needed for the purposes set out in this document
-- the law requires us to
+Device and Network Data: Your Internet Protocol (IP) address, domain name, and details of the operating system (e.g. Windows, MacOS, iOS) and web browser version (e.g., Chrome, Edge, Safari) used to access the site.
 
-We will keep your email data: until you unsubscribe.
+- Analytical/Performance Cookies: We use these to measure how visitors interact with our site. This helps us understand the "user journey" for example, which pages are viewed most often and the route a user takes through the site. This data is non-personally identifiable; it is aggregated to help us improve site performance and content.
 
-We will keep your feedback data: for 2 years.
+What is collected:
+Usage Data:
 
-We will delete access log data: after 120 days.
+Aggregated metrics such as the number of visits, average time spent on the site, and specific pages viewed. 
 
-## Children's privacy protection
+When you visit the ORUK website for the first time, a banner will appear asking for your consent to use non-essential (analytical) cookies - Under UK law, you cannot "pre-tick" consent boxes for analytical cookies; the user must take an affirmative action.
+
+- Your preference will be remembered for subsequent visits.
+- As permitted by law, strictly necessary cookies are deployed automatically to ensure the site operates safely and efficiently.
+
+You have the right to choose whether or not to accept cookies. Most web browsers allow you to manage or block cookies through their settings.
+
+To find out more about how to see what cookies have been set and how to manage, delete, or block them, you can:
+
+- Consult your browser’s ‘Help’ file.
+- Visit [wwww.aboutcookies.org](www.aboutcookies.org) or [www.allaboutcookies.org](www.allaboutcookies.org)  for independent, comprehensive guidance.
+
+## How We Use Personal Data
+
+Under UK GDPR, we must have a lawful basis to process your data. We use your data for the following:
+
+<table>
+<tr>
+<th>Purpose/Activity</th>
+<th>Type of Data</th>
+<th>Lawful Basis for Processing</th>
+</tr
+<tr>
+    <td>Service Delivery: Providing resources, testing/inspecting open data feeds, and managing your account.</td>
+    <td>Identity, Contact</td>
+    <td>Contractual / Legitimate Interest</td>
+</tr>
+<tr>
+    <td>Communications: Sending updates on the ORUK programme or responding to queries.</td>
+    <td>Identity, Contact</td>
+    <td>Legitimate Interest</td>
+</tr>
+<tr>
+    <td>Marketing: Sending newsletters and recommending relevant services.</td>
+    <td>Identity, Contact, Preferences</td>
+    <td>Consent (You may withdraw this at any time)</td>
+</tr>
+<tr>
+    <td>Site Security: Identifying threats and ensuring the integrity of the website.</td>
+    <td>Technical, Usage</td>
+    <td>Legitimate Interest</td>
+</tr>
+
+</table>
+
+
+## How We Share Personal Data 
+
+We do not sell or rent your data to third parties. We only share your information with:
+- **Service Providers:** Sub-contractors and technology suppliers who process data on our behalf (e.g. Mailchimp for newsletters and Tameside MBC for secure server hosting).
+- **Legal Requirements:** If required by law, such as by court order or for the prevention of fraud.
+
+## Your Rights and Accessing Your Data
+
+Under UK law, you have the following rights:
+
+- Right of Access: Request a copy of your personal data.
+- Right to Rectification: Ask us to correct inaccurate or incomplete data.
+- Right to Erasure: Ask us to delete your data (the "right to be forgotten").
+- Right to Restriction/Objection: Limit how we process your data or object to it entirely.
+- Right to Data Portability: Request the transfer of your data to another organisation. 
+- Right to Withdraw Consent: Where we rely on consent (e.g., marketing), you can withdraw it at any time.
+
+## Data Retention
+
+We only keep your data for as long as necessary to fulfil the purposes we collected it for.
+
+- Email/Marketing Data: Retained until you unsubscribe.
+- Feedback Data: Retained for 2 years.
+- Access Log Data (Security): Deleted after 120 days.
+
+# Children's Privacy Protection
 
 Our services are not designed for, or intentionally targeted at, children 13 years of age or younger. We do not intentionally collect or maintain data about anyone under the age of 13.
 
-## Where your data is processed and stored
+# Artificial Intelligence
 
-We design, build and run our systems to make sure that your data is as safe as possible at all stages, both while it’s processed and when it’s stored.
+This website may utilise AI technologies to enhance internal operations; however, we exclusively use Microsoft Copilot. We do not use AI to store, collect, or process personal data, its application is strictly limited to internal productivity and support functions within our organisation. We do not use automated decision making.
 
-Where possible, personal data is stored in the UK or the European Economic Area (EEA).
+# Links To Other Websites
 
-## How we protect your data and keep it secure
-
-We are committed to doing all that we can to keep your data secure. We have set up systems and processes to prevent unauthorised access or disclosure of your data - for example, we protect your data using varying levels of encryption.
-
-We also make sure that any third parties that we deal with keep all personal data they process on our behalf secure.
-
-## Your rights
-
-Under UK data protection law, we must have a ‘lawful basis’ for collecting and using your personal information. There is a list of possible lawful bases in the UK GDPR. You can find out more about lawful bases on the ICO’s website.
-
-Which lawful basis we rely on may affect your data protection rights which are in brief set out below. You can find out more about your data protection rights and the exemptions which may apply on the ICO’s website:
-
-**Your right of access** - You have the right to ask us for copies of your personal information. You can request other information such as details about where we get personal information from and who we share personal information with. There are some exemptions which means you may not receive all the information you ask for. [You can read more about this right here.](https://ico.org.uk/for-organisations/advice-for-small-organisations/create-your-own-privacy-notice/your-data-protection-rights/#roa)
-
-**Your right to rectification** - You have the right to ask us to correct or delete personal information you think is inaccurate or incomplete. [You can read more about this right here.](https://ico.org.uk/for-organisations/advice-for-small-organisations/create-your-own-privacy-notice/your-data-protection-rights/#rtr)
-
-**Your right to erasure** - You have the right to ask us to delete your personal information. [You can read more about this right here.](https://ico.org.uk/for-organisations/advice-for-small-organisations/create-your-own-privacy-notice/your-data-protection-rights/#rte)
-
-**Your right to restriction of processing** - You have the right to ask us to limit how we can use your personal information. [You can read more about this right here.](https://ico.org.uk/for-organisations/advice-for-small-organisations/create-your-own-privacy-notice/your-data-protection-rights/#rtrop)
-
-**Your right to object to processing** - You have the right to object to the processing of your personal data. [You can read more about this right here.](https://ico.org.uk/for-organisations/advice-for-small-organisations/create-your-own-privacy-notice/your-data-protection-rights/#rto)
-
-**Your right to data portability** - You have the right to ask that we transfer the personal information you gave us to another organisation, or to you. [You can read more about this right here.](https://ico.org.uk/for-organisations/advice-for-small-organisations/create-your-own-privacy-notice/your-data-protection-rights/#rtdp)
-
-**Your right to withdraw consent** – As we have used consent as our lawful basis you have the right to withdraw your consent at any time. [You can read more about this right here.](https://ico.org.uk/for-organisations/advice-for-small-organisations/create-your-own-privacy-notice/your-data-protection-rights/#rtwc)
-
-If you make a request, we must respond to you without undue delay and in any event **within one month.**
-
-To make a data protection rights request, please contact us using the contact details at the bottom of this Privacy Notice.
-
-## Links to other websites
-
-OpenReferralUK.org contains links to other websites.
+[OpenReferralUK](https://OpenReferralUK.org) contains links to other websites
 
 This Privacy Notice only applies to OpenReferralUK.org, and does not cover other sites that we link to.
 
-### Following a link to another website
+## Following a link to another website
 
 If you go to another website from this one, read the Privacy Policy on that website to find out what it does with your information.
 
-### Following a link to OpenReferralUK.org from another website
+## Following a link to OpenReferralUK.org from another website
 
 If you come to OpenReferralUK.org from another website, we may receive personal information from the other website. You should read the Privacy Policy of the website you came from to find out more about this.
 
@@ -121,23 +162,14 @@ If you come to OpenReferralUK.org from another website, we may receive personal 
 
 This Privacy Notice only does not cover data exposed from data feeds accessed via Application Programming Interfaces from publishers of services data. It is the publishers’ responsibility to protect the privacy of their users and only publish information that can be shared according to the General Data Protection Regulation.
 
-## Contact us or make a complaint
+# Contact Us Or Make A Complaint
 
-If you have any questions or concerns about how we handle your personal information, please email infogov@tpximpact.com.
+If you have any questions or concerns about how we handle your personal information, or would like to make a complaint, please email hello@OpenReferralUK.org , or contact us at iStandUK/ORUK, Tameside MBC, Tameside One, Market Place, Ashton-under-Lyne, OL6 6BH.
 
-If you have any concerns about our use of your personal data, you can make a complaint to us using the contact details at the top of this Privacy Notice.
+You can also contact our Data Protection Officer at information.governance@tameside.gov.uk  or by calling 0161 342 8355.
 
-If you remain unhappy with how we’ve used your data after raising a complaint with us, you can also complain to the ICO.
+Details of the data we hold, will be provided on request. Any request of this nature should be directed to the e-mail address shown above.
 
-The ICO’s address:
+If you remain unhappy with how we have used your data after raising a complaint with us, you can also complain to the ICO. Their information can be found here: [https://ico.org.uk/make-a-complaint/ ](https://ico.org.uk/make-a-complaint/) 
 
-Information Commissioner’s Office
-Wycliffe House
-Water Lane
-Wilmslow
-Cheshire
-SK9 5AF
-
-Helpline number: 0303 123 1113
-
-Website: https://www.ico.org.uk/make-a-complaint
+Further guidance on the use of personal information can be found at the [Information Commissioner’s Office](https://ico.org.uk). 

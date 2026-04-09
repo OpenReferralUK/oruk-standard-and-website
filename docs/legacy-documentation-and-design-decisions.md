@@ -1,8 +1,8 @@
 # Legacy Documentation and Design Decisions
 
-> **Note:** This document contains archived historical documentation for reference purposes. The core, up-to-date project documentation is now maintained on the [GitHub Wiki](https://github.com/tpximpact/oruk-standard-and-website/wiki).
+> **Note:** This document contains archived historical documentation for reference purposes. The core, up-to-date project documentation is now maintained on the [GitHub Wiki](https://github.com/OpenReferralUk/oruk-standard-and-website/wiki).
 >
-> For current documentation, please visit the wiki at: **https://github.com/tpximpact/oruk-standard-and-website/wiki**
+> For current documentation, please visit the wiki at: **https://github.com/OpenReferralUk/oruk-standard-and-website/wiki**
 
 **Archived Date:** January 28, 2026
 
@@ -788,7 +788,7 @@ try {
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/tpximpact/oruk-standard-and-website.git
+git clone https://github.com/OpenReferralUK/oruk-standard-and-website.git
 cd oruk-standard-and-website
 
 # 2. Install dependencies
@@ -1102,13 +1102,13 @@ See `.env.example` for full list of environment variables and their descriptions
 ### Related Documentation
 
 - [README.md](../README.md) - Project overview and quick start
-- [Managing Content](https://github.com/tpximpact/oruk-standard-and-website/wiki/Managing-Content) - Content authoring guide
-- [Testing](https://github.com/tpximpact/oruk-standard-and-website/wiki/Testing) - Testing guidelines
-- [GitHub Integration](https://github.com/tpximpact/oruk-standard-and-website/wiki/GitHub-Issue-Creation-for-Service-Verification) - GitHub App setup
+- [Managing Content](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/Managing-Content) - Content authoring guide
+- [Testing](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/Testing) - Testing guidelines
+- [GitHub Integration](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/GitHub-Issue-Creation-for-Service-Verification) - GitHub App setup
 
 **Document Version:** 2.0  
 **Last Updated:** January 20, 2026  
-**Maintainer:** TPXImpact Development Team
+**Maintainer:** iStandUK Technical Team
 
 ---
 
@@ -1284,11 +1284,11 @@ ie this repository
 
 #### d) include a test suite
 
-For more details see [Testing](https://github.com/tpximpact/oruk-standard-and-website/wiki/Testing)
+For more details see [Testing](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/Testing)
 
 #### e) ✅ be accessible
 
-For more details see [A11y](https://github.com/tpximpact/oruk-standard-and-website/wiki/A11y)
+For more details see [A11y](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/A11y)
 
 ---
 
@@ -1312,9 +1312,9 @@ Content management - which previously used Strapi - has been simplified to use [
 
 (under construction)
 
-![Image](https://github.com/tpximpact/oruk-standard-and-website/wiki/images/architecture.png)
+![Image](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/images/architecture.png)
 
-This file is also available as a [PDF (right click to download)](https://github.com/tpximpact/oruk-standard-and-website/wiki/files/architecture-0_2.pdf).
+This file is also available as a [PDF (right click to download)](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/files/architecture-0_2.pdf).
 
 ## Hosting requirements
 
@@ -1370,8 +1370,8 @@ _Last edited: July 18, 2024 | 1 revision_
 
 _For current documentation, please visit the project wiki:_
 
-- _[GitHub Wiki Home](https://github.com/tpximpact/oruk-standard-and-website/wiki) - Main documentation hub_
-- _[Architecture](https://github.com/tpximpact/oruk-standard-and-website/wiki) - Current technical architecture_
-- _[Managing Content](https://github.com/tpximpact/oruk-standard-and-website/wiki/Managing-Content) - Content authoring guide_
-- _[Testing](https://github.com/tpximpact/oruk-standard-and-website/wiki/Testing) - Testing guidelines_
+- _[GitHub Wiki Home](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki) - Main documentation hub_
+- _[Architecture](https://github.com/OpenReferralUK /oruk-standard-and-website/wiki) - Current technical architecture_
+- _[Managing Content](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/Managing-Content) - Content authoring guide_
+- _[Testing](https://github.com/OpenReferralUK/oruk-standard-and-website/wiki/Testing) - Testing guidelines_
 - _[README.md](../README.md) - Project overview and getting started_

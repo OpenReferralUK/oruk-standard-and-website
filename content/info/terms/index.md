@@ -8,7 +8,7 @@ This page and any pages it links to explains Open Referral UK’s terms of use. 
 
 ## Who we are
 
-Open Referral UK is a community of organisations that publish and process services data relevant to the Open Referral UK Data Standard. The community is administered by TPXimpact Limited (TPX) on behalf of stakeholders in the [Local Digital](https://localdigital.gov.uk/) community of organisations.
+Open Referral UK is a community of organisations that publish and process services data relevant to the Open Referral UK Data Standard. The community is administered by iStandUK on behalf of stakeholders in the [Local Digital](https://localdigital.gov.uk/) community of organisations.
 
 ## Using the Open Referral UK website and services
 
@@ -52,7 +52,7 @@ If any content is not published under the OGL, we’ll usually credit the author
 
 You can reproduce content published on Open Referral UK under the OGL as long as you follow the licence’s conditions.
 
-Contact us at infogov@tpximpact.com if you want to reproduce a piece of content but are not sure if it’s covered by the OGL.
+Contact us at hello@OpenReferralUK.org if you want to reproduce a piece of content but are not sure if it’s covered by the OGL.
 
 We do not give any guarantees, conditions or warranties about the accuracy or completeness of any content used by these products. We’re not liable for any loss or damage that may come from your use of these products.
 
@@ -106,13 +106,13 @@ You can ask for content to be removed from Open Referral UK. We will remove cont
 - in order to comply with data protection legislation covering the rights and freedoms of individuals
 - if it breaches copyright laws, contains sensitive personal data or material that may be considered obscene or defamatory
 
-Contact us at infogov@tpximpact.com to ask for content to be removed. You will need to send us the web address (URL) of the content and explain why you think it should be removed. We will reply to let you know whether we’ll remove it.
+Contact us at hello@OpenReferralUK.org to ask for content to be removed. You will need to send us the web address (URL) of the content and explain why you think it should be removed. We will reply to let you know whether we’ll remove it.
 
 We remove content at our discretion in discussion with stakeholders. You can still request information under the [Freedom of Information Act](https://www.gov.uk/make-a-freedom-of-information-request) and the [Data Protection Act](https://www.gov.uk/data-protection).
 
 ## Information about you and your visits to OpenReferralUK
 
-We collect information about you in accordance with our [Privacy Notice](https://openreferraluk.org/privacy-policy) and our Cookie Policy. By using Open Referral UK, you agree to us collecting this information and confirm that any data you provide is accurate.
+We collect information about you in accordance with our [Privacy Notice](https://openreferraluk.org/info/privacy) and our Cookie Policy. By using Open Referral UK, you agree to us collecting this information and confirm that any data you provide is accurate.
 
 ## Virus protection
 

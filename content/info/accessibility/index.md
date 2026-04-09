@@ -6,7 +6,7 @@ modified: '2025-02-28T11:11:24.344Z'
 
 This statement applies to content published on the [https://openreferraluk.org](/) domain.
 
-This website is run by TPXimpact on behalf of MHCLG. We want as many people as possible to be able to use this website. For example, that means you should be able to:
+This website is run by iStandUK on behalf of MHCLG. We want as many people as possible to be able to use this website. For example, that means you should be able to:
 
 - Change colours, contrast levels and fonts using browser or device settings
 - Navigate most of the website using just a keyboard
@@ -25,7 +25,7 @@ We will update the statement when issues are fixed or when we expect them to be 
 
 ## Feedback and contact information
 
-If you find any problems not listed on this page or think we’re not meeting accessibility requirements, contact us at hello@openreferraluk.org
+If you find any problems not listed on this page or think we’re not meeting accessibility requirements, contact us at hello@OpenReferralUK.org
 
 If you need information on this website in a different format, such as accessible PDF, please contact us using the information above.
 
@@ -49,7 +49,7 @@ We understand the importance of making our site accessible to all users, however
 
 ### Content developed and published by third parties
 
-The forum is a third-party tool and may not meet accessibility standards. A public audit has been published by the Teaching Systems Lab at MIT. Please contact hello@openreferraluk.org if you wish to request accessible alternatives to content on the forum.
+The forum is a third-party tool and may not meet accessibility standards. A public audit has been published by the Teaching Systems Lab at MIT. Please contact hello@OpenReferralUK.org if you wish to request accessible alternatives to content on the forum.
 
 We provide links to interactive API documentation created using the SwaggerUI tool. In common with all output of this tool, this documentaion may not be accesible. Our site provides equivalent infomation in accesible format, but without the interactive features.
 
