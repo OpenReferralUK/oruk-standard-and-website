@@ -19,7 +19,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@microlink/react-json-view": "^1.31.15",
+    "@microlink/react-json-view": "^1.31.18",
     "@octokit/auth-app": "^8.2.0",
     "@vercel/analytics": "^2.0.1",
     "color-interpolate": "^2.0.0",
@@ -30,7 +30,7 @@
     "next": "^16.1.7",
     "octokit": "^5.0.5",
     "react": "^19.2.4",
-    "react-cookie": "^8.0.1",
+    "react-cookie": "^8.1.0",
     "react-cookie-consent": "^10.0.1",
     "react-dom": "^19.2.4",
     "react-hot-toast": "^2.6.0",
