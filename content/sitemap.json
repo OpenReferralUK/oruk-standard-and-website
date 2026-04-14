@@ -102,13 +102,6 @@
         "teaser": "This tool checks that a specific data feed follows the standard. It shows any issues as well as statistics on what types of data is included in the scanned data feed. This helps Councils move to the standard. This tool also helps establish trust as it ensures that a Service Directory follows the standard."
       },
       {
-        "name": "dashboard",
-        "label": "Verified feed availability",
-        "urlPath": "dashboard",
-        "contentPath": "dashboard",
-        "teaser": "This tool provides near-real time status reporting for core service providers."
-      },
-      {
         "name": "register",
         "label": "Register your feed",
         "urlPath": "register",
