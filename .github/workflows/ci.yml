@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: '20'
+  NODE_VERSION: '22'
   TRIVY_DOCKER_IMAGE: 'aquasec/trivy:0.69.1'
 
 permissions:
