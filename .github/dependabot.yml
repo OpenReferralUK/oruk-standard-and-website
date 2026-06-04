@@ -9,6 +9,7 @@ updates:
       day: 'monday'
       time: '03:00' # Predictable time → fewer rebases
       timezone: 'Etc/UTC'
+    target-branch: "staging"  
     open-pull-requests-limit: 12 # Slightly higher is fine with groups
     labels:
       - 'dependencies'
@@ -84,6 +85,7 @@ updates:
       day: 'monday'
       time: '03:00'
       timezone: 'Etc/UTC'
+    target-branch: "staging"  
     labels:
       - 'dependencies'
       - 'github-actions'
