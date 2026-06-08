@@ -4552,12 +4552,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^18.0.4":
-  version: 18.0.4
-  resolution: "marked@npm:18.0.4"
+"marked@npm:^18.0.5":
+  version: 18.0.5
+  resolution: "marked@npm:18.0.5"
   bin:
     marked: bin/marked.js
-  checksum: f54dcbb39d3acdcd0356f7629b42811eec56db5f6daef7404e582cdf800f5b598b681f9f8a187e7f51262e37c607f5e0cd9880e56b5c8160a49c3f7828e9e459
+  checksum: 8/132e873833d8c7e81fa17291a4843701b706bf480deb2d6f2ef9201dc9ba380a22c67812fdeca980c351c54965a2ef80dc04503a132f6d99c94ea7f8a63b1775
   languageName: node
   linkType: hard
 
@@ -5464,7 +5464,7 @@ __metadata:
     js-yaml: ^4.2.0
     jsdom: ^29.1.1
     lint-staged: ^17.0.7
-    marked: ^18.0.4
+    marked: ^18.0.5
     mongodb: ^7.2.0
     next: ^16.2.6
     octokit: ^5.0.5
