@@ -56,7 +56,7 @@ jobs:
         run: yarn test --coverage --passWithNoTests
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v6.0.1
+        uses: codecov/codecov-action@v7.0.0
         with:
           directory: ./coverage
           fail_ci_if_error: false
@@ -148,7 +148,7 @@ jobs:
           severity: 'CRITICAL,HIGH,MEDIUM,UNKNOWN'
 
       - name: Upload Trivy FS SARIF
-        uses: github/codeql-action/upload-sarif@v4.36.1
+        uses: github/codeql-action/upload-sarif@v4.36.2
         if: always()
         with:
           sarif_file: trivy-fs-results.sarif
@@ -280,7 +280,7 @@ jobs:
           fi
 
       - name: Upload Trivy Image SARIF
-        uses: github/codeql-action/upload-sarif@v4.36.1
+        uses: github/codeql-action/upload-sarif@v4.36.2
         if: steps.trivy_sarif.outputs.present == 'true'
         with:
           sarif_file: trivy-image-results.sarif
