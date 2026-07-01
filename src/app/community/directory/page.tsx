@@ -24,41 +24,15 @@ export default async function Page(props: PageProps) {
   const repo = new ServiceRepository()
   const activeServices = await repo.find({ active: true })
 
-  const extractValue = (field: unknown): string => {
-    if (typeof field === 'string') return field
-    if (typeof field === 'object' && field !== null && 'value' in field) {
-      return String((field as { value?: unknown }).value ?? 'N/A')
-    }
-    return field ? String(field) : 'N/A'
-  }
-
-  const extractUrl = (field: unknown, fallback: unknown): string => {
-    if (typeof field === 'string') return field
-    if (typeof field === 'object' && field !== null && 'url' in field) {
-      return String((field as { url?: unknown }).url ?? 'No URL provided')
-    }
-    return fallback ? String(fallback) : 'No URL provided'
-  }
-
   // Map services into the shape expected by ServicesTable
-  const serviceData = activeServices.map(s => {
-    const name = extractValue(s.name)
-    const publisher = extractValue(s.publisher)
-    const publisherUrl = extractUrl(s.publisher, s.publisherUrl)
-    const description = extractValue(s.description)
-    const developer = extractValue(s.developer)
-    const developerUrl = extractUrl(s.developer, s.developerUrl)
-    const serviceUrl = extractUrl(s.service, s.serviceUrl)
-
-    return {
-      name: { value: name, url: serviceUrl },
-      publisher: { value: publisher, url: publisherUrl },
-      comment: { value: description },
-      developer: { value: developer, url: developerUrl },
-      lastTested: { value: s.lastTested, url: `/developers/dashboard/${s.id}` }
-    }
-  })
-
+  const serviceData = activeServices.map(s => ({
+    name: { value: s.name, url: s.serviceUrl },
+    publisher: { value: s.publisher, url: s.publisherUrl },
+    comment: { value: s.description },
+    developer: { value: s.developer, url: s.developerUrl },
+    lastTested: { value: s.lastTested, url: `/developers/dashboard/${s.id}` }
+  })) 
+  
   return (
     <>
       <NamedMarkdownPage
