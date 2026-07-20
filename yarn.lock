@@ -959,17 +959,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microlink/react-json-view@npm:^1.31.20":
-  version: 1.31.20
-  resolution: "@microlink/react-json-view@npm:1.31.20"
+"@microlink/react-json-view@npm:^1.31.22":
+  version: 1.31.22
+  resolution: "@microlink/react-json-view@npm:1.31.22"
   dependencies:
-    react-base16-styling: "npm:~0.10.0"
-    react-lifecycles-compat: "npm:~3.0.4"
-    react-textarea-autosize: "npm:~8.5.9"
+    react-base16-styling: ~0.10.0
+    react-lifecycles-compat: ~3.0.4
+    react-textarea-autosize: ~8.5.9
   peerDependencies:
     react: ">= 15"
     react-dom: ">= 15"
-  checksum: 0c75d7637c1a9ee017b85f24890f488c1f926bc558e188f0f8b37fe4fc67acc161c558091eaf117c11e10c2647f555c2e4f8df4ed5f4038277e44c9682a52d2a
+  checksum: 8/52345a5b5c58c16244b34f4c4ba4327175bffa8092f0ee7d56279dd7d033c2556cec387f910e4b626af9ae1b9db35f0aa306606fd284c6f85fbb6cff55c07577
   languageName: node
   linkType: hard
 
@@ -5211,12 +5211,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^5.6.0":
-  version: 5.6.0
-  resolution: "react-icons@npm:5.6.0"
+"react-icons@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "react-icons@npm:5.7.0"
   peerDependencies:
     react: "*"
-  checksum: addba1ebfd45cdf7f69291d0c93df64fca1271cfdb66df657abd223e3451c73356b035f50e75858627dd182b02129596c79eaaaa45d32eb52658e443a992645c
+  checksum: 8/96dcc5410518ef08d5f62e7083ee59545203f753a358733f303ae63fe67f068dd62e9bcb09101756d3644daee76e44bc63a3d170f1db10dd747c2637c16f6060
   languageName: node
   linkType: hard
 
@@ -5435,7 +5435,7 @@ __metadata:
   dependencies:
     "@axe-core/playwright": ^4.11.3
     "@eslint/js": ^10.0.1
-    "@microlink/react-json-view": ^1.31.20
+    "@microlink/react-json-view": ^1.31.22
     "@next/eslint-plugin-next": ^16.2.9
     "@octokit/auth-app": ^8.2.0
     "@playwright/test": ^1.60.0
@@ -5474,7 +5474,7 @@ __metadata:
     react-cookie-consent: ^10.0.1
     react-dom: ^19.2.6
     react-hot-toast: ^2.6.0
-    react-icons: ^5.6.0
+    react-icons: ^5.7.0
     ts-node: ^10.9.2
     tsx: ^4.22.4
     typescript: 6.0.3
