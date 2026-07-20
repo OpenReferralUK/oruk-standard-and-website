@@ -3727,21 +3727,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-react-parser@npm:^6.1.4":
-  version: 6.1.4
-  resolution: "html-react-parser@npm:6.1.4"
+"html-react-parser@npm:^6.1.5":
+  version: 6.1.5
+  resolution: "html-react-parser@npm:6.1.5"
   dependencies:
     domhandler: 6.0.1
     html-dom-parser: 8.0.0
     react-property: 2.0.2
-    style-to-js: 2.0.1
+    style-to-js: 2.0.2
   peerDependencies:
     "@types/react": 0.14 || 15 || 16 || 17 || 18 || 19
     react: 0.14 || 15 || 16 || 17 || 18 || 19
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 8/b338a1fed1459ea99881ce612ce6ea41677bbfc09c3810a97f4c663c067fa0391d0376ea15d5985083f0522b7c5e4fa0d846393640937f412eac82aeddb07774
+  checksum: 8/775e6634e7ff783a57887579ddfb7940324456ee469a19a42ff80e975e1577f20e4188d1f1dd699ac5749988b6916f537d55479d44a72002ba61b8294b04f200
   languageName: node
   linkType: hard
 
@@ -3794,10 +3794,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inline-style-parser@npm:0.2.7":
-  version: 0.2.7
-  resolution: "inline-style-parser@npm:0.2.7"
-  checksum: d884d76f84959517430ae6c22f0bda59bb3f58f539f99aac75a8d786199ec594ed648c6ab4640531f9fc244b0ed5cd8c458078e592d016ef06de793beb1debff
+"inline-style-parser@npm:0.2.9":
+  version: 0.2.9
+  resolution: "inline-style-parser@npm:0.2.9"
+  checksum: 8/29cd1c548ad2467716fc188279debd460a0401199872a0dc8c780c596b155384ce902ad0327a127e78598c1b73f79930d5429115dccbd53f95b9f83f5138adcb
   languageName: node
   linkType: hard
 
@@ -5459,7 +5459,7 @@ __metadata:
     eslint-plugin-react: ^7.37.5
     eslint-plugin-react-hooks: ^7.1.1
     gray-matter: ^4.0.3
-    html-react-parser: ^6.1.4
+    html-react-parser: ^6.1.5
     husky: ^9.1.7
     js-yaml: ^4.2.0
     jsdom: ^29.1.1
@@ -5980,21 +5980,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-to-js@npm:2.0.1":
-  version: 2.0.1
-  resolution: "style-to-js@npm:2.0.1"
+"style-to-js@npm:2.0.2":
+  version: 2.0.2
+  resolution: "style-to-js@npm:2.0.2"
   dependencies:
-    style-to-object: 2.0.0
-  checksum: 8/b7ce7d2752bc6cd2b7d76e0e9bab0c1430685d2bcf8af54547c19ece8f62b22dc2c8e0fac42a8094554e2bb1d9deba5d4f5e260b9fb8464138e2435c3a751b4b
+    style-to-object: 2.0.2
+  checksum: 8/c546f2f329c51f9fe7a19e77e490f9d7fc4caa2cb4705c827ce1ede9ab9e2aac67d108ed95be880120ae517e5df6206aa8716f7a2abe513d716ffdd4c188988b
   languageName: node
   linkType: hard
 
-"style-to-object@npm:2.0.0":
-  version: 2.0.0
-  resolution: "style-to-object@npm:2.0.0"
+"style-to-object@npm:2.0.2":
+  version: 2.0.2
+  resolution: "style-to-object@npm:2.0.2"
   dependencies:
-    inline-style-parser: 0.2.7
-  checksum: 8/b33a8a9b8ef7ab7897fa619f53f7db2b26d2b17c47120303549e23bc3e7c375d7db6f9109cb4dea87537849a21dcf5e151506bcbfd87796f611c6b15da755c61
+    inline-style-parser: 0.2.9
+  checksum: 8/e1957d018ed6f58768bb8b39f9e477483299fadf07ba39e26519fbb7e2a7dfac43dea52c046a52cba6aff837892b01cf8ef92fe7f5f6ce1c97995525ecde1652
   languageName: node
   linkType: hard
 
