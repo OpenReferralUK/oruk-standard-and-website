@@ -994,10 +994,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/env@npm:16.2.10"
-  checksum: 8/83efc68aed6a1dfaa96ead9e1d7273cfd50b09418e128fa4effa91bda4bd46adeaab9325fd09bae34d8046e7524a923ed9cb6975445f0820c0de399c41f9c820
+"@next/env@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/env@npm:16.2.12"
+  checksum: 8/4dd2aaee0df15fc5f9dfbc45602f4d528ae992e3e5f2a98075962274454a0ca7a0bd083e1cad38816d3c0b0c65398cdc44e242700076d73953cf32c109f4d5e1
   languageName: node
   linkType: hard
 
@@ -1010,58 +1010,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-darwin-arm64@npm:16.2.10"
+"@next/swc-darwin-arm64@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-darwin-arm64@npm:16.2.12"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-darwin-x64@npm:16.2.10"
+"@next/swc-darwin-x64@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-darwin-x64@npm:16.2.12"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-linux-arm64-gnu@npm:16.2.10"
+"@next/swc-linux-arm64-gnu@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-arm64-gnu@npm:16.2.12"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-linux-arm64-musl@npm:16.2.10"
+"@next/swc-linux-arm64-musl@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-arm64-musl@npm:16.2.12"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-linux-x64-gnu@npm:16.2.10"
+"@next/swc-linux-x64-gnu@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-x64-gnu@npm:16.2.12"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-linux-x64-musl@npm:16.2.10"
+"@next/swc-linux-x64-musl@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-linux-x64-musl@npm:16.2.12"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-win32-arm64-msvc@npm:16.2.10"
+"@next/swc-win32-arm64-msvc@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-win32-arm64-msvc@npm:16.2.12"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:16.2.10":
-  version: 16.2.10
-  resolution: "@next/swc-win32-x64-msvc@npm:16.2.10"
+"@next/swc-win32-x64-msvc@npm:16.2.12":
+  version: 16.2.12
+  resolution: "@next/swc-win32-x64-msvc@npm:16.2.12"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4721,19 +4721,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^16.2.10":
-  version: 16.2.10
-  resolution: "next@npm:16.2.10"
+"next@npm:^16.2.12":
+  version: 16.2.12
+  resolution: "next@npm:16.2.12"
   dependencies:
-    "@next/env": 16.2.10
-    "@next/swc-darwin-arm64": 16.2.10
-    "@next/swc-darwin-x64": 16.2.10
-    "@next/swc-linux-arm64-gnu": 16.2.10
-    "@next/swc-linux-arm64-musl": 16.2.10
-    "@next/swc-linux-x64-gnu": 16.2.10
-    "@next/swc-linux-x64-musl": 16.2.10
-    "@next/swc-win32-arm64-msvc": 16.2.10
-    "@next/swc-win32-x64-msvc": 16.2.10
+    "@next/env": 16.2.12
+    "@next/swc-darwin-arm64": 16.2.12
+    "@next/swc-darwin-x64": 16.2.12
+    "@next/swc-linux-arm64-gnu": 16.2.12
+    "@next/swc-linux-arm64-musl": 16.2.12
+    "@next/swc-linux-x64-gnu": 16.2.12
+    "@next/swc-linux-x64-musl": 16.2.12
+    "@next/swc-win32-arm64-msvc": 16.2.12
+    "@next/swc-win32-x64-msvc": 16.2.12
     "@swc/helpers": 0.5.15
     baseline-browser-mapping: ^2.9.19
     caniuse-lite: ^1.0.30001579
@@ -4777,7 +4777,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 8/16ac79da9ff3290cd0aa23cf1e466566feb989b6c11db474b1baae968f02ac70aff7925099b6304f68fda100126b6f2f5eaea90c1a85efa3957cdcb2191a767c
+  checksum: 8/0609fec968e7e58f92bfaeecbb2b0c7d0d124b1c60523a384ad93ed07148628884dbd51107179fd32940397272faed24bec60d792a7df6465d68c482791b0632
   languageName: node
   linkType: hard
 
@@ -5187,14 +5187,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.2.6":
-  version: 19.2.7
-  resolution: "react-dom@npm:19.2.7"
+"react-dom@npm:^19.2.8":
+  version: 19.2.8
+  resolution: "react-dom@npm:19.2.8"
   dependencies:
-    scheduler: "npm:^0.27.0"
+    scheduler: ^0.27.0
   peerDependencies:
-    react: ^19.2.7
-  checksum: 970ff600f6e80d47d39e2f226f12f226173b3cba3382efc97c5f0cd663de9af38c7a4c11c213fb936094faeac83060d660247accaa96b752180d5b951b9cfecb
+    react: ^19.2.8
+  checksum: 8/cef5d9493f911f20da5648bbd44a27e7e2e96868be4ed0a6a650499b19d74156d35e8c2eee9c075a2cbce59ef3da483cb55113f2941c1bc17fd005ffa92d7084
   languageName: node
   linkType: hard
 
@@ -5261,10 +5261,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.2.6":
-  version: 19.2.7
-  resolution: "react@npm:19.2.7"
-  checksum: 0bd0e2f1bbd4ba97561c6597bf8a5fec05e6476fe61e165c1065598d16668efc6715205599c94d3ddd49d36cb0f21cbf1b9bcc18ee840b805ce222c3e8d558ac
+"react@npm:^19.2.8":
+  version: 19.2.8
+  resolution: "react@npm:19.2.8"
+  checksum: 8/cdedb4786eb3eb79c8fbaa6df299de61ecd9e1cd4c7cd52213b5af7a98c67d532fd6b14b9d546ae5851f3962437aec22ad17ee6e8e0450de11c595300c5e5bd7
   languageName: node
   linkType: hard
 
@@ -5466,13 +5466,13 @@ __metadata:
     lint-staged: ^17.0.7
     marked: ^18.0.6
     mongodb: ^7.3.0
-    next: ^16.2.10
+    next: ^16.2.12
     octokit: ^5.0.5
     prettier: ^3.8.4
-    react: ^19.2.6
+    react: ^19.2.8
     react-cookie: ^8.1.2
     react-cookie-consent: ^10.0.1
-    react-dom: ^19.2.6
+    react-dom: ^19.2.8
     react-hot-toast: ^2.6.0
     react-icons: ^5.6.0
     ts-node: ^10.9.2
