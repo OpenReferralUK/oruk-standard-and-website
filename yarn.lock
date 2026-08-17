@@ -3701,13 +3701,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-dom-parser@npm:8.0.0":
-  version: 8.0.0
-  resolution: "html-dom-parser@npm:8.0.0"
+"html-dom-parser@npm:8.0.2":
+  version: 8.0.2
+  resolution: "html-dom-parser@npm:8.0.2"
   dependencies:
-    domhandler: "npm:6.0.1"
-    htmlparser2: "npm:12.0.0"
-  checksum: 8458df97521270b0d9d0c5a604462189b1f58c6da58810dfaae7d1903a15f25da01ed224de5ecf243dad36e91436d32dd45e6e207fcc4bcd35a3bb28d3268881
+    domhandler: 6.0.1
+    htmlparser2: 12.0.0
+  checksum: 8/00cddf8e1bf43bb8f0219a4de2f8cc31af789efa2724d2aa7a7c1ac322e9bc4c37bfd8e603ce1b30df265286b2b51c9ba353369192fc307dc9cecd4281da8523
   languageName: node
   linkType: hard
 
@@ -3727,12 +3727,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-react-parser@npm:^6.1.5":
-  version: 6.1.5
-  resolution: "html-react-parser@npm:6.1.5"
+"html-react-parser@npm:^6.1.7":
+  version: 6.1.7
+  resolution: "html-react-parser@npm:6.1.7"
   dependencies:
     domhandler: 6.0.1
-    html-dom-parser: 8.0.0
+    html-dom-parser: 8.0.2
     react-property: 2.0.2
     style-to-js: 2.0.2
   peerDependencies:
@@ -3741,7 +3741,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 8/775e6634e7ff783a57887579ddfb7940324456ee469a19a42ff80e975e1577f20e4188d1f1dd699ac5749988b6916f537d55479d44a72002ba61b8294b04f200
+  checksum: 8/387000a808d180c0924ff7056cbb69d48a1faa5ff8897b38be4528ebcdc49e4188d68a52482ac7c04af57f994e4d9634e6850db1e01482aeced25566180de0af
   languageName: node
   linkType: hard
 
@@ -5459,7 +5459,7 @@ __metadata:
     eslint-plugin-react: ^7.37.5
     eslint-plugin-react-hooks: ^7.1.1
     gray-matter: ^4.0.3
-    html-react-parser: ^6.1.5
+    html-react-parser: ^6.1.7
     husky: ^9.1.7
     js-yaml: ^5.2.2
     jsdom: ^29.1.1

@@ -24,7 +24,7 @@
     "@vercel/analytics": "^2.0.1",
     "color-interpolate": "^2.0.0",
     "gray-matter": "^4.0.3",
-    "html-react-parser": "^6.1.5",
+    "html-react-parser": "^6.1.7",
     "marked": "^18.0.9",
     "mongodb": "^7.5.0",
     "next": "^16.2.12",
