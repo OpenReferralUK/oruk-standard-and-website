@@ -959,17 +959,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microlink/react-json-view@npm:^1.31.20":
-  version: 1.31.20
-  resolution: "@microlink/react-json-view@npm:1.31.20"
+"@microlink/react-json-view@npm:^1.31.28":
+  version: 1.31.28
+  resolution: "@microlink/react-json-view@npm:1.31.28"
   dependencies:
-    react-base16-styling: "npm:~0.10.0"
-    react-lifecycles-compat: "npm:~3.0.4"
-    react-textarea-autosize: "npm:~8.5.9"
+    react-base16-styling: ~0.10.0
+    react-lifecycles-compat: ~3.0.4
+    react-textarea-autosize: ~8.5.9
   peerDependencies:
     react: ">= 15"
     react-dom: ">= 15"
-  checksum: 0c75d7637c1a9ee017b85f24890f488c1f926bc558e188f0f8b37fe4fc67acc161c558091eaf117c11e10c2647f555c2e4f8df4ed5f4038277e44c9682a52d2a
+  checksum: 8/267e0a0ac30a2f345eb314631a9ec10df551ded86a732fc54dc44002a6c2816e64508449ec71ef4b2a075955b1944ab3f5420e6f273bd611f1259bb5205398a6
   languageName: node
   linkType: hard
 
@@ -2498,13 +2498,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-interpolate@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "color-interpolate@npm:2.0.0"
+"color-interpolate@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "color-interpolate@npm:2.1.1"
   dependencies:
-    color-parse: "npm:^2.0.2"
-    color-space: "npm:^2.3.2"
-  checksum: 3a4fe3616a17b4a9f5fac6be2c371fda8346f2edd4437306c45725146d746f52d7fd54d0f61b45ade7a6ec186ef6a8dbc7935336b6fe012ba2095f0c34bfba8e
+    color-rgba: ^3.1.0
+  checksum: 8/2e1752f4e23f334112106ce660509a43921550784a5719c7325169c13bf2dcf540ee1b73269bce5415b99163108b48f1ecf78f44582658438bdeed24efddd5e7
   languageName: node
   linkType: hard
 
@@ -2522,19 +2521,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-parse@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "color-parse@npm:2.0.2"
+"color-parse@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "color-parse@npm:2.1.2"
   dependencies:
-    color-name: "npm:^2.0.0"
-  checksum: 5761baa81e3c8acf3625f4a6ca77b72e77ee9429c0b9757baab18ea1af0861919aee47e337675c47ee5bf3bc2b10cd0690e226322058e94457f2b501e1ef132b
+    color-name: ^2.0.0
+  checksum: 8/428cb00baf4e010e08d1812c47b965a7491227027020f7fd45e34cf1a0a81ec3977b2902f2d179f71acf38d585dc0c91eb094bdf67f50597c86fb0220bf68b42
   languageName: node
   linkType: hard
 
-"color-space@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "color-space@npm:2.3.2"
-  checksum: c755fb464d3e9205a405d22b0c04e32cd3e8401fdf49890644e29cfcaf9e53f72902191ff1845e7ebea12eeff86cafac2a36e203cbcce9c7afa4d11a5414a71a
+"color-rgba@npm:^3.1.0":
+  version: 3.1.1
+  resolution: "color-rgba@npm:3.1.1"
+  dependencies:
+    color-parse: ^2.1.0
+    color-space: ^3.1.0
+  checksum: 8/ffbd2f03567ab5406ca11530ab66b3c1450e8a84be5f81ef8c88df128f48f42f18f8651878b4a76b9e660574e11959de2ba9e028f11f5df607190373bf42b158
+  languageName: node
+  linkType: hard
+
+"color-space@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "color-space@npm:3.1.0"
+  bin:
+    color-space-mcp: mcp.js
+  checksum: 8/740e9466e111b83065e3111c5e9011fd90719554bbc3f23d53d83a1304b5a6c2fe3c4273f2c2c4f4e2e99bef5bbe3537d0fd9d22aab63ab5565bbb5f451f0cf5
   languageName: node
   linkType: hard
 
@@ -4138,7 +4149,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-cookie@npm:^3.0.5":
+"js-cookie@npm:^3.0.8":
   version: 3.0.8
   resolution: "js-cookie@npm:3.0.8"
   checksum: 421912a4a55535bda32b3059835864e1182c3af5b4516df00a060edc1fa5a53d38bb8d5a91d5d305e396206f4fd11e829f17850aa5aa8164118c04d8ebf1ff5d
@@ -5162,15 +5173,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-cookie-consent@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "react-cookie-consent@npm:10.0.1"
+"react-cookie-consent@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "react-cookie-consent@npm:10.0.2"
   dependencies:
-    js-cookie: "npm:^3.0.5"
+    js-cookie: ^3.0.8
   peerDependencies:
     react: ">=18"
     react-dom: ">=18"
-  checksum: 76977fea75885a815d002a279845e892dc42c3b9c0482859f0ab2077ac1ada68a07192557731b2b4393796f753770a30319905d184896fcc623d5fa69d2a0f8c
+  checksum: 8/7d973f1a5042c3f4e14ae7d2009185e26bb250326436bff041eef14751d93a8b1bffbae1e17df9a7a99700f9ea6a41097267ef658e46296fddc12df95f564e1d
   languageName: node
   linkType: hard
 
@@ -5211,12 +5222,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^5.6.0":
-  version: 5.6.0
-  resolution: "react-icons@npm:5.6.0"
+"react-icons@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "react-icons@npm:5.7.0"
   peerDependencies:
     react: "*"
-  checksum: addba1ebfd45cdf7f69291d0c93df64fca1271cfdb66df657abd223e3451c73356b035f50e75858627dd182b02129596c79eaaaa45d32eb52658e443a992645c
+  checksum: 8/96dcc5410518ef08d5f62e7083ee59545203f753a358733f303ae63fe67f068dd62e9bcb09101756d3644daee76e44bc63a3d170f1db10dd747c2637c16f6060
   languageName: node
   linkType: hard
 
@@ -5435,7 +5446,7 @@ __metadata:
   dependencies:
     "@axe-core/playwright": ^4.11.3
     "@eslint/js": ^10.0.1
-    "@microlink/react-json-view": ^1.31.20
+    "@microlink/react-json-view": ^1.31.28
     "@next/eslint-plugin-next": ^16.2.12
     "@octokit/auth-app": ^8.2.0
     "@playwright/test": ^1.60.0
@@ -5453,7 +5464,7 @@ __metadata:
     "@vitejs/plugin-react": ^6.0.5
     "@vitest/coverage-v8": ^4.1.8
     "@vitest/ui": ^4.1.8
-    color-interpolate: ^2.0.0
+    color-interpolate: ^2.1.1
     dotenv: ^17.4.2
     eslint: ^10.5.0
     eslint-plugin-react: ^7.37.5
@@ -5471,10 +5482,10 @@ __metadata:
     prettier: ^3.8.4
     react: ^19.2.8
     react-cookie: ^8.1.2
-    react-cookie-consent: ^10.0.1
+    react-cookie-consent: ^10.0.2
     react-dom: ^19.2.8
     react-hot-toast: ^2.6.0
-    react-icons: ^5.6.0
+    react-icons: ^5.7.0
     ts-node: ^10.9.2
     tsx: ^4.22.4
     typescript: 6.0.3
