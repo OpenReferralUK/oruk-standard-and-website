@@ -8,7 +8,10 @@ const nextConfig: NextConfig = {
   typescript: {
     tsconfigPath: './tsconfig.json'
   },
-  // output: 'standalone',
+  // Standalone output is only needed for the Docker image used by the CI
+  // security scans (Trivy image scan + OWASP ZAP). Vercel builds must NOT
+  // use it, so the Dockerfile opts in via BUILD_STANDALONE=true.
+  output: process.env.BUILD_STANDALONE === 'true' ? 'standalone' : undefined,
   experimental: {
     serverComponentsHmrCache: false
   },

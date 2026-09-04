@@ -157,7 +157,9 @@ jobs:
     name: Build & Push Docker Image to GHCR
     runs-on: ubuntu-latest
     needs: [build-and-test, code-quality, security-scan-fs, accessibility-tests]
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.base_ref == 'main')
+    # Runs on every push and pull request, including PRs targeting staging.
+    # Skipping it on staging PRs let a change that breaks the image build merge
+    # green and only fail afterwards on the merge commit.
     outputs:
       image_ref: ${{ steps.image_ref.outputs.image_ref }}
 
@@ -222,7 +224,6 @@ jobs:
     name: Trivy Image Vulnerability Scan
     runs-on: ubuntu-latest
     needs: docker-build
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.base_ref == 'main')
 
     steps:
       - name: Log in to GitHub Container Registry
