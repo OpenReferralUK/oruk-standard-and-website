@@ -90,7 +90,7 @@ ORUK API has RESTful web services documented according to the OpenAPI standard. 
   available at a location.
 - <code>/taxonomies</code> and <code>/taxonomies/{id}</code> Taxonomies referenced by the data and
   their details
-- </code>/taxonomy_terms</code> and <code>/taxonomy_terms/{id}</code> List of taxonomy terms and details of a specified taxonomy term
+- <code>/taxonomy_terms</code> and <code>/taxonomy_terms/{id}</code> List of taxonomy terms and details of a specified taxonomy term
 
 Version 3.0 has nine GET web methods. See the [API page](/developers/api) and [Swagger documentation](https://docs.openreferral.org/en/latest/openapi.html).
 
