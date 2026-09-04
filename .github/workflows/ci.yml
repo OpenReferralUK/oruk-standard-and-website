@@ -32,10 +32,21 @@ jobs:
         uses: actions/setup-node@v7.0.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      # Corepack must be enabled before the cache-enabled setup-node below:
+      # that step shells out to `yarn cache dir`, and the runner's global
+      # Yarn 1 refuses to run once package.json pins packageManager to Yarn 4.
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Restore Yarn cache
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install # --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Cache Next.js build
         uses: actions/cache@v6.1.0
@@ -82,10 +93,21 @@ jobs:
         uses: actions/setup-node@v7.0.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      # Corepack must be enabled before the cache-enabled setup-node below:
+      # that step shells out to `yarn cache dir`, and the runner's global
+      # Yarn 1 refuses to run once package.json pins packageManager to Yarn 4.
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Restore Yarn cache
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install # --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run ESLint
         run: yarn lint
@@ -106,10 +128,21 @@ jobs:
         uses: actions/setup-node@v7.0.0
         with:
           node-version: ${{ env.NODE_VERSION }}
+
+      # Corepack must be enabled before the cache-enabled setup-node below:
+      # that step shells out to `yarn cache dir`, and the runner's global
+      # Yarn 1 refuses to run once package.json pins packageManager to Yarn 4.
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Restore Yarn cache
+        uses: actions/setup-node@v7.0.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install # --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium

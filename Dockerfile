@@ -1,17 +1,25 @@
 # Production Dockerfile for ORUK ORUK
 FROM node:22-alpine AS base
 
+# Enable Corepack once in the base stage so every derived stage inherits it.
+# Stages do not share state, so enabling it only in deps would leave the
+# builder stage running the image's global Yarn 1, which refuses to start
+# once package.json pins packageManager to Yarn 4.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+RUN corepack enable
+
 # Install dependencies only when needed
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Copy package files
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+# Copy package files. .yarnrc.yml is required: it selects the node-modules
+# linker, and without it Yarn would fall back to its PnP default here.
+COPY package.json yarn.lock* .yarnrc.yml* package-lock.json* pnpm-lock.yaml* ./
 
 # Install dependencies based on the preferred package manager
 RUN \
-  if [ -f yarn.lock ]; then corepack enable && yarn install --immutable; \
+  if [ -f yarn.lock ]; then yarn install --immutable; \
   elif [ -f package-lock.json ]; then npm ci; \
   elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i --frozen-lockfile; \
   else echo "Lockfile not found." && exit 1; \
