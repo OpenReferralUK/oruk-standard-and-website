@@ -35,7 +35,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install # --frozen-lockfile
+        run: corepack enable && yarn install --immutable
 
       - name: Cache Next.js build
         uses: actions/cache@v6.1.0
@@ -85,7 +85,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install # --frozen-lockfile
+        run: corepack enable && yarn install --immutable
 
       - name: Run ESLint
         run: yarn lint
@@ -109,7 +109,7 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install # --frozen-lockfile
+        run: corepack enable && yarn install --immutable
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium

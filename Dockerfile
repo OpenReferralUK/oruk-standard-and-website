@@ -6,8 +6,13 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Copy package files
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+# Copy package files. .yarnrc.yml is required: it selects the node-modules
+# linker, and without it Yarn would fall back to its PnP default here.
+COPY package.json yarn.lock* .yarnrc.yml* package-lock.json* pnpm-lock.yaml* ./
+
+# Corepack reads the packageManager field in package.json to pick the exact
+# Yarn version, so --immutable is enforced against the committed lockfile.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 
 # Install dependencies based on the preferred package manager
 RUN \
