@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   typescript: {
     tsconfigPath: './tsconfig.json'
   },
-  output: 'standalone',
+  // output: 'standalone',
   experimental: {
     serverComponentsHmrCache: false
   },
