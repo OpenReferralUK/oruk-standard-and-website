@@ -26,6 +26,10 @@ COPY . .
 # Disable telemetry during build
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Opt in to Next.js standalone output. Only the Docker image needs it; Vercel
+# builds leave it unset so they use Vercel's own output format.
+ENV BUILD_STANDALONE=true
+
 # Build the application
 RUN \
   if [ -f yarn.lock ]; then yarn build; \
