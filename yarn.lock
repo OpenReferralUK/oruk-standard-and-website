@@ -959,9 +959,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microlink/react-json-view@npm:^1.31.20":
-  version: 1.31.20
-  resolution: "@microlink/react-json-view@npm:1.31.20"
+"@microlink/react-json-view@npm:^1.31.31":
+  version: 1.31.31
+  resolution: "@microlink/react-json-view@npm:1.31.31"
   dependencies:
     react-base16-styling: "npm:~0.10.0"
     react-lifecycles-compat: "npm:~3.0.4"
@@ -969,7 +969,7 @@ __metadata:
   peerDependencies:
     react: ">= 15"
     react-dom: ">= 15"
-  checksum: 10c0/0c75d7637c1a9ee017b85f24890f488c1f926bc558e188f0f8b37fe4fc67acc161c558091eaf117c11e10c2647f555c2e4f8df4ed5f4038277e44c9682a52d2a
+  checksum: 10c0/1fefdae091982f8daeca3305fcd845d51343edde738c7e6f54a720e1a116ee38bd6fdcdbea126e94c18c00949fd07c3912ac5d1586b966cd192b1d5551b7c0e5
   languageName: node
   linkType: hard
 
@@ -2504,13 +2504,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-interpolate@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "color-interpolate@npm:2.0.0"
+"color-interpolate@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "color-interpolate@npm:2.1.1"
   dependencies:
-    color-parse: "npm:^2.0.2"
-    color-space: "npm:^2.3.2"
-  checksum: 10c0/3a4fe3616a17b4a9f5fac6be2c371fda8346f2edd4437306c45725146d746f52d7fd54d0f61b45ade7a6ec186ef6a8dbc7935336b6fe012ba2095f0c34bfba8e
+    color-rgba: "npm:^3.1.0"
+  checksum: 10c0/e151ff1e1fbe28279bb7ba6fbd2ea45a50f17f11b035a7e24d939cb1bd5979a685c43c565bdf4ece36f4e824a9ed4e9bcdab194963e6e647b0a7913b315293ff
   languageName: node
   linkType: hard
 
@@ -2528,19 +2527,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-parse@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "color-parse@npm:2.0.2"
+"color-parse@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "color-parse@npm:2.1.2"
   dependencies:
     color-name: "npm:^2.0.0"
-  checksum: 10c0/5761baa81e3c8acf3625f4a6ca77b72e77ee9429c0b9757baab18ea1af0861919aee47e337675c47ee5bf3bc2b10cd0690e226322058e94457f2b501e1ef132b
+  checksum: 10c0/334068db00790afe81dd12fb5ecc46f3666c31273ac38b91a68a7327e22dea79554c143889d182b3669dd70be1dededb5a4a07a89bacac9d03c8a168b1e8f057
   languageName: node
   linkType: hard
 
-"color-space@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "color-space@npm:2.3.2"
-  checksum: 10c0/c755fb464d3e9205a405d22b0c04e32cd3e8401fdf49890644e29cfcaf9e53f72902191ff1845e7ebea12eeff86cafac2a36e203cbcce9c7afa4d11a5414a71a
+"color-rgba@npm:^3.1.0":
+  version: 3.1.1
+  resolution: "color-rgba@npm:3.1.1"
+  dependencies:
+    color-parse: "npm:^2.1.0"
+    color-space: "npm:^3.1.0"
+  checksum: 10c0/5a860ec99e3b89e67c5c986b249c8b2488a2d8fb54c1eeeecc21b29df85c3057066664e161226935d7b312dfaae8f6ee14f549dd389a59cb6f021f100619ed09
+  languageName: node
+  linkType: hard
+
+"color-space@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "color-space@npm:3.1.0"
+  bin:
+    color-space-mcp: mcp.js
+  checksum: 10c0/199880fcd1de5bb82d938fd495464e45425c6eaf49869a32beadab3a5b0544086b245935a88a2b0a8e1fabcd063215eb2a6803238f05f4178e7d6d4c2641dda7
   languageName: node
   linkType: hard
 
@@ -4144,7 +4155,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"js-cookie@npm:^3.0.5":
+"js-cookie@npm:^3.0.8":
   version: 3.0.8
   resolution: "js-cookie@npm:3.0.8"
   checksum: 10c0/421912a4a55535bda32b3059835864e1182c3af5b4516df00a060edc1fa5a53d38bb8d5a91d5d305e396206f4fd11e829f17850aa5aa8164118c04d8ebf1ff5d
@@ -5168,15 +5179,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-cookie-consent@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "react-cookie-consent@npm:10.0.1"
+"react-cookie-consent@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "react-cookie-consent@npm:10.0.2"
   dependencies:
-    js-cookie: "npm:^3.0.5"
+    js-cookie: "npm:^3.0.8"
   peerDependencies:
     react: ">=18"
     react-dom: ">=18"
-  checksum: 10c0/76977fea75885a815d002a279845e892dc42c3b9c0482859f0ab2077ac1ada68a07192557731b2b4393796f753770a30319905d184896fcc623d5fa69d2a0f8c
+  checksum: 10c0/d941ae3b4116eb693214d9b265fdaf7456df68669e4fa9128d9b675515a295f13f786a2525542d7adf5f52ef281007dab52d2022e7d5575fb31abc0d8d9e99e0
   languageName: node
   linkType: hard
 
@@ -5217,12 +5228,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^5.6.0":
-  version: 5.6.0
-  resolution: "react-icons@npm:5.6.0"
+"react-icons@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "react-icons@npm:5.7.0"
   peerDependencies:
     react: "*"
-  checksum: 10c0/addba1ebfd45cdf7f69291d0c93df64fca1271cfdb66df657abd223e3451c73356b035f50e75858627dd182b02129596c79eaaaa45d32eb52658e443a992645c
+  checksum: 10c0/cc5ae92e61ef9d8fc83cb3f3ac2710deab9174c5831bdaf2a94b099acfc91074a60d4b3adfd3165dcb9b21799ca6c760b3f4f6596d75198c1ed2ea44240818c8
   languageName: node
   linkType: hard
 
@@ -5441,7 +5452,7 @@ __metadata:
   dependencies:
     "@axe-core/playwright": "npm:^4.11.3"
     "@eslint/js": "npm:^10.0.1"
-    "@microlink/react-json-view": "npm:^1.31.20"
+    "@microlink/react-json-view": "npm:^1.31.31"
     "@next/eslint-plugin-next": "npm:^16.2.12"
     "@octokit/auth-app": "npm:^8.2.0"
     "@playwright/test": "npm:^1.60.0"
@@ -5459,7 +5470,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^6.0.5"
     "@vitest/coverage-v8": "npm:^4.1.8"
     "@vitest/ui": "npm:^4.1.8"
-    color-interpolate: "npm:^2.0.0"
+    color-interpolate: "npm:^2.1.1"
     dotenv: "npm:^17.4.2"
     eslint: "npm:^10.5.0"
     eslint-plugin-react: "npm:^7.37.5"
@@ -5477,17 +5488,17 @@ __metadata:
     prettier: "npm:^3.8.4"
     react: "npm:^19.2.8"
     react-cookie: "npm:^8.1.2"
-    react-cookie-consent: "npm:^10.0.1"
+    react-cookie-consent: "npm:^10.0.2"
     react-dom: "npm:^19.2.8"
     react-hot-toast: "npm:^2.6.0"
-    react-icons: "npm:^5.6.0"
+    react-icons: "npm:^5.7.0"
     ts-node: "npm:^10.9.2"
     tsx: "npm:^4.22.4"
     typescript: "npm:6.0.3"
     typescript-eslint: "npm:^8.65.0"
-    uuid: "npm:^14.0.1"
+    uuid: "npm:^14.0.2"
     vitest: "npm:^4.1.8"
-    zod: "npm:^4.4.3"
+    zod: "npm:^4.5.4"
   languageName: unknown
   linkType: soft
 
@@ -6438,12 +6449,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^14.0.1":
-  version: 14.0.1
-  resolution: "uuid@npm:14.0.1"
+"uuid@npm:^14.0.2":
+  version: 14.0.2
+  resolution: "uuid@npm:14.0.2"
   bin:
     uuid: dist-node/bin/uuid
-  checksum: 10c0/2d961289097cb68c37d93d1da0b5c3aafc1eb9948a455cca8d0ae53a099b2fe583b8933254a84097f700e6bac2e23033364904df0467c22551d5d9611febcaf6
+  checksum: 10c0/88906237004db370b013129c8372a2149f6fa1aad7a5f78fa65ddf2ba0a8663097022300d81fa01f551efee9d6bbe8c7ab140dc6d49f1b03d289f855096990c9
   languageName: node
   linkType: hard
 
@@ -6814,9 +6825,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.0 || ^4.0.0, zod@npm:^4.4.3":
+"zod@npm:^3.25.0 || ^4.0.0":
   version: 4.4.3
   resolution: "zod@npm:4.4.3"
   checksum: 10c0/7ea31b558e88f9faf44f31dd185e2e1cbf51fed3081787fb96cc2534749b50c0acfc6da7f0922a7353ed092dd358c7d50c28ea96c94d04af64191bd33152eca3
+  languageName: node
+  linkType: hard
+
+"zod@npm:^4.5.4":
+  version: 4.5.4
+  resolution: "zod@npm:4.5.4"
+  checksum: 10c0/511a2a4d1a6f875dfdd70a1586989a8b14ef126776cd6218a2c760b9f65f14ef389ec20d92ee1aa4fcb4566d4ff3fa012956044f9dc503510d82e4c756a8ba92
   languageName: node
   linkType: hard
