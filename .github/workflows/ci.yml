@@ -123,14 +123,14 @@ jobs:
       # --- CodeQL ---
       - name: Initialize CodeQL
         if: matrix.check == 'codeql'
-        uses: github/codeql-action/init@v4.37.9
+        uses: github/codeql-action/init@v4.38.0
         with:
           languages: javascript-typescript
           build-mode: none
 
       - name: Perform CodeQL analysis
         if: matrix.check == 'codeql'
-        uses: github/codeql-action/analyze@v4.37.9
+        uses: github/codeql-action/analyze@v4.38.0
 
       # --- Playwright accessibility ---
       # This leg needs Node and dependencies, so it repeats the Corepack
@@ -200,7 +200,7 @@ jobs:
 
       - name: Upload Trivy FS SARIF
         if: always() && matrix.check == 'trivy-fs'
-        uses: github/codeql-action/upload-sarif@v4.37.9
+        uses: github/codeql-action/upload-sarif@v4.38.0
         with:
           sarif_file: trivy-fs-results.sarif
 
@@ -251,7 +251,7 @@ jobs:
 
       - name: Upload Trivy image SARIF
         if: always() && hashFiles('trivy-image-results.sarif') != ''
-        uses: github/codeql-action/upload-sarif@v4.37.9
+        uses: github/codeql-action/upload-sarif@v4.38.0
         with:
           sarif_file: trivy-image-results.sarif
 
@@ -375,7 +375,7 @@ jobs:
           echo "Release tag: $tag"
 
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v2.5.0
+        uses: softprops/action-gh-release@v3.0.3
         with:
           tag_name: ${{ steps.tag.outputs.tag }}
           name: Release ${{ steps.tag.outputs.tag }}
