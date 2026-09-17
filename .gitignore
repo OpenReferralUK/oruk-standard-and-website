@@ -4,7 +4,16 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
+.pnp.*
+
+# Yarn Berry: the repo does not use zero-installs, so only the release and
+# patch metadata is tracked. .yarnrc.yml itself is committed.
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # testing
 /coverage

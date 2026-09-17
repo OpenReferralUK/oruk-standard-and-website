@@ -4,15 +4,21 @@ FROM node:22-alpine
 # Install dependencies for native modules
 RUN apk add --no-cache libc6-compat
 
+# Enable Corepack so `yarn` resolves to the version pinned by the
+# packageManager field, both during this build and for `yarn dev` at runtime.
+ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+RUN corepack enable
+
 # Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+# Copy package files. .yarnrc.yml is required: it selects the node-modules
+# linker, and without it Yarn would fall back to its PnP default here.
+COPY package.json yarn.lock* .yarnrc.yml* package-lock.json* pnpm-lock.yaml* ./
 
 # Install dependencies
 RUN \
-  if [ -f yarn.lock ]; then corepack enable && yarn install --immutable; \
+  if [ -f yarn.lock ]; then yarn install --immutable; \
   elif [ -f package-lock.json ]; then npm ci; \
   elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i; \
   else echo "Warning: Lockfile not found. Installing dependencies without lock." && yarn install; \

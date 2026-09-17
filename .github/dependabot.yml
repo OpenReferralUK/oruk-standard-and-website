@@ -9,11 +9,10 @@ updates:
       day: 'monday'
       time: '03:00' # Predictable time → fewer rebases
       timezone: 'Etc/UTC'
-    target-branch: "staging"  
+    target-branch: 'staging'
     open-pull-requests-limit: 12 # Slightly higher is fine with groups
     labels:
       - 'dependencies'
-      - 'yarn' # Easier filtering than generic "npm"
     commit-message:
       prefix: 'chore'
       prefix-development: 'chore(dev)' # Distinguishes dev vs prod commits
@@ -77,6 +76,20 @@ updates:
         patterns:
           - '*'
 
+    ignore:
+      # TypeScript 7 is not yet usable here, so hold the major and keep taking
+      # 6.x patches and minors. Two blockers, both upstream:
+      #   - next build refuses: "TypeScript 7.0.2 does not provide the compiler
+      #     API required by Next.js ... or install TypeScript 6 instead", which
+      #     also fails both Vercel deployments
+      #   - typescript-eslint errors on import; 8.70.0 declares peer typescript
+      #     ">=4.8.4 <6.1.0" and upstream is tracking TS >=7.1, skipping 7.0
+      #     (typescript-eslint/typescript-eslint#10940)
+      # Remove this once Next.js supports the TS 7 compiler API and
+      # typescript-eslint ships TS 7 support. See #421.
+      - dependency-name: 'typescript'
+        update-types: ['version-update:semver-major']
+
   # Recommended addition: GitHub Actions (you likely have workflows)
   - package-ecosystem: 'github-actions'
     directory: '/'
@@ -85,7 +98,7 @@ updates:
       day: 'monday'
       time: '03:00'
       timezone: 'Etc/UTC'
-    target-branch: "staging"  
+    target-branch: 'staging'
     labels:
       - 'dependencies'
       - 'github-actions'
