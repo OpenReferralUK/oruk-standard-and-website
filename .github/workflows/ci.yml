@@ -89,7 +89,7 @@ jobs:
         run: yarn test --coverage --passWithNoTests
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v7.0.0
+        uses: codecov/codecov-action@v7.1.1
         with:
           directory: ./coverage
           fail_ci_if_error: false
@@ -123,14 +123,14 @@ jobs:
       # --- CodeQL ---
       - name: Initialize CodeQL
         if: matrix.check == 'codeql'
-        uses: github/codeql-action/init@v4.37.9
+        uses: github/codeql-action/init@v4.38.1
         with:
           languages: javascript-typescript
           build-mode: none
 
       - name: Perform CodeQL analysis
         if: matrix.check == 'codeql'
-        uses: github/codeql-action/analyze@v4.37.9
+        uses: github/codeql-action/analyze@v4.38.1
 
       # --- Playwright accessibility ---
       # This leg needs Node and dependencies, so it repeats the Corepack
@@ -200,7 +200,7 @@ jobs:
 
       - name: Upload Trivy FS SARIF
         if: always() && matrix.check == 'trivy-fs'
-        uses: github/codeql-action/upload-sarif@v4.37.9
+        uses: github/codeql-action/upload-sarif@v4.38.1
         with:
           sarif_file: trivy-fs-results.sarif
 
@@ -220,10 +220,10 @@ jobs:
       - uses: actions/checkout@v7.0.1
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v4.3.0
+        uses: docker/setup-buildx-action@v4.4.1
 
       - name: Build local image
-        uses: docker/build-push-action@v7.3.0
+        uses: docker/build-push-action@v7.4.0
         with:
           context: .
           file: ./Dockerfile
@@ -251,7 +251,7 @@ jobs:
 
       - name: Upload Trivy image SARIF
         if: always() && hashFiles('trivy-image-results.sarif') != ''
-        uses: github/codeql-action/upload-sarif@v4.37.9
+        uses: github/codeql-action/upload-sarif@v4.38.1
         with:
           sarif_file: trivy-image-results.sarif
 
@@ -375,7 +375,7 @@ jobs:
           echo "Release tag: $tag"
 
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v2.5.0
+        uses: softprops/action-gh-release@v3.0.3
         with:
           tag_name: ${{ steps.tag.outputs.tag }}
           name: Release ${{ steps.tag.outputs.tag }}
