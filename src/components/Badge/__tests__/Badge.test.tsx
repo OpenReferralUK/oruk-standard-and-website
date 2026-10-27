@@ -12,7 +12,7 @@ describe('Badge', () => {
     const badge = container.firstChild
     expect(badge).toHaveStyle({
       color: 'rgb(255, 0, 0)',
-      background: 'rgb(0, 0, 255)'
+      backgroundColor: 'rgb(0, 0, 255)'
     })
   })
 })
@@ -24,7 +24,7 @@ describe('BadgeRequired', () => {
     expect(badge).toBeInTheDocument()
     expect(badge).toHaveStyle({
       color: 'rgb(0, 0, 0)',
-      background: 'rgb(254, 205, 211)'
+      backgroundColor: 'rgb(254, 205, 211)'
     })
   })
 })
@@ -36,7 +36,7 @@ describe('BadgeUnique', () => {
     expect(badge).toBeInTheDocument()
     expect(badge).toHaveStyle({
       color: 'rgb(0, 0, 0)',
-      background: 'rgb(233, 213, 255)'
+      backgroundColor: 'rgb(233, 213, 255)'
     })
   })
 })
@@ -48,7 +48,7 @@ describe('BadgeInPath', () => {
     expect(badge).toBeInTheDocument()
     expect(badge).toHaveStyle({
       color: 'rgb(0, 0, 0)',
-      background: 'rgb(191, 219, 254)'
+      backgroundColor: 'rgb(191, 219, 254)'
     })
   })
 })
