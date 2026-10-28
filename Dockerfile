@@ -8,6 +8,19 @@ FROM node:22-alpine AS base
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable
 
+# Upgrade OpenSSL ahead of the base image. node:22-alpine currently ships
+# libssl3/libcrypto3 3.5.7-r0, which Trivy flags for ten CVEs; Alpine has
+# 3.5.8-r0 in its repositories. The tag already floats, so waiting for a
+# newer node:22-alpine achieves nothing until upstream rebuilds - see #475.
+#
+# Named packages rather than a blanket `apk upgrade`: a whole-repo upgrade
+# would make the image's contents vary with Alpine's state rather than with
+# this file, so a build could start failing for reasons absent from the diff.
+#
+# Done in base so every derived stage inherits it. Only the runner stage is
+# scanned, but it derives from here, so this is the single place to fix it.
+RUN apk add --no-cache --upgrade libssl3 libcrypto3
+
 # Install dependencies only when needed
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
