@@ -66,6 +66,18 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
+# Remove npm from the runtime image. The standalone server starts with
+# `node server.js` and never shells out to a package manager, so npm is
+# dead weight here - but it is the single largest source of findings in
+# the scan: its vendored dependencies account for 28 of the container's
+# 48 Trivy alerts, including a CRITICAL in tar 7.5.11. Note that copy is
+# npm's own and unrelated to the project's tar, which resolves to 7.5.22.
+#
+# Only the runner stage is stripped. deps and builder keep npm so the
+# package-lock.json fallback branches above still work. See #475.
+RUN rm -rf /usr/local/lib/node_modules/npm \
+    && rm -f /usr/local/bin/npm /usr/local/bin/npx
+
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
