@@ -1,5 +1,18 @@
 # Production Dockerfile for ORUK ORUK
-FROM node:22-alpine AS base
+
+# Pinned by digest, not by tag alone. node:22-alpine floats: upstream
+# republished it on 2026-10-22 and moved it from Alpine 3.23 to 3.24 with no
+# PR and no review, which is the realistic route to a broken libc6-compat or
+# native module. Pinning turns that into a Dependabot PR someone reads.
+#
+# It also makes the scan result attributable. While the tag floated there was
+# no way to tell a stale build from an upstream that had not patched yet,
+# because nothing recorded which image had been scanned; a finding that
+# persists against a pinned digest provably means upstream has not fixed it.
+#
+# The tag is kept alongside the digest so Dependabot knows what to track.
+# See #475.
+FROM node:22-alpine@sha256:fe4f6d74e20370acb04ad889077d14d0f64a9c8ea6a42bc60cddf1e844699914 AS base
 
 # Enable Corepack once in the base stage so every derived stage inherits it.
 # Stages do not share state, so enabling it only in deps would leave the
