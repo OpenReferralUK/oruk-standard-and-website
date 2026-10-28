@@ -179,24 +179,16 @@ jobs:
           retention-days: 14
 
       # --- Trivy filesystem ---
-      - name: Cache Trivy DB
-        if: matrix.check == 'trivy-fs'
-        uses: actions/cache@v6.1.0
-        with:
-          # Only the `db` subdirectory, which holds the vulnerability database.
-          # Caching the whole of .trivycache also persisted `fanal`, Trivy's
-          # layer analysis cache, and the loose restore-keys below let any
-          # branch's copy be restored over a freshly built image. That is how
-          # the scan came to report OpenSSL 3.5.7-r0 and a full npm tree for an
-          # image that provably contained 3.5.9-r0 and no npm at all - 39
-          # phantom findings on main. See #475.
-          #
-          # The database is the part worth keeping: it is the slow download and
-          # the one that hits registry rate limits. The analysis is cheap and
-          # must never outlive the image it describes.
-          path: .trivycache/db
-          key: trivy-db-${{ runner.os }}-${{ github.ref_name }}
-          restore-keys: trivy-db-${{ runner.os }}-
+      # No hand-rolled cache step here. trivy-action manages its own database
+      # cache, keyed by date (`cache-trivy-<yyyy-mm-dd>`), which rotates daily
+      # and cannot go stale. The step that used to sit here cached the whole of
+      # .trivycache under a static `trivy-db-<os>-<branch>` key, so it also
+      # persisted `fanal`, Trivy's layer analysis - and because the key never
+      # changed, actions/cache hit it every run and therefore never saved a new
+      # one. A stale analysis of the old base layers was replayed over every
+      # freshly built image, reporting OpenSSL 3.5.7-r0 and a full npm tree for
+      # an image that provably contained 3.5.9-r0 and no npm: 39 phantom
+      # findings that survived two attempts to fix the Dockerfile. See #475.
 
       - name: Trivy filesystem scan
         if: matrix.check == 'trivy-fs'
@@ -207,7 +199,6 @@ jobs:
           output: 'trivy-fs-results.sarif'
           severity: 'CRITICAL,HIGH,MEDIUM,UNKNOWN'
           exit-code: '0' # Reported via SARIF; the gatekeeper decides pass/fail
-          cache-dir: .trivycache
 
       - name: Upload Trivy FS SARIF
         if: always() && matrix.check == 'trivy-fs'
@@ -243,24 +234,16 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Cache Trivy DB
-        uses: actions/cache@v6.1.0
-        with:
-          # Only the `db` subdirectory, which holds the vulnerability database.
-          # Caching the whole of .trivycache also persisted `fanal`, Trivy's
-          # layer analysis cache, and the loose restore-keys below let any
-          # branch's copy be restored over a freshly built image. That is how
-          # the scan came to report OpenSSL 3.5.7-r0 and a full npm tree for an
-          # image that provably contained 3.5.9-r0 and no npm at all - 39
-          # phantom findings on main. See #475.
-          #
-          # The database is the part worth keeping: it is the slow download and
-          # the one that hits registry rate limits. The analysis is cheap and
-          # must never outlive the image it describes.
-          path: .trivycache/db
-          key: trivy-db-${{ runner.os }}-${{ github.ref_name }}
-          restore-keys: trivy-db-${{ runner.os }}-
-
+      # No hand-rolled cache step here. trivy-action manages its own database
+      # cache, keyed by date (`cache-trivy-<yyyy-mm-dd>`), which rotates daily
+      # and cannot go stale. The step that used to sit here cached the whole of
+      # .trivycache under a static `trivy-db-<os>-<branch>` key, so it also
+      # persisted `fanal`, Trivy's layer analysis - and because the key never
+      # changed, actions/cache hit it every run and therefore never saved a new
+      # one. A stale analysis of the old base layers was replayed over every
+      # freshly built image, reporting OpenSSL 3.5.7-r0 and a full npm tree for
+      # an image that provably contained 3.5.9-r0 and no npm: 39 phantom
+      # findings that survived two attempts to fix the Dockerfile. See #475.
       - name: Trivy image scan
         uses: aquasecurity/trivy-action@v0.36.0
         with:
@@ -269,7 +252,6 @@ jobs:
           output: 'trivy-image-results.sarif'
           severity: 'CRITICAL,HIGH,MEDIUM,UNKNOWN'
           exit-code: '0'
-          cache-dir: .trivycache
 
       - name: Upload Trivy image SARIF
         if: always() && hashFiles('trivy-image-results.sarif') != ''
