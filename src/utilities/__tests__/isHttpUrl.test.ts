@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { isHttpUrl } from '../isHttpUrl'
+import { isHttpUrl, toHttpUrl } from '../isHttpUrl'
 
 describe('isHttpUrl', () => {
   it('should accept http and https', () => {
@@ -28,5 +28,21 @@ describe('isHttpUrl', () => {
     expect(isHttpUrl('')).toBe(false)
     expect(isHttpUrl(null)).toBe(false)
     expect(isHttpUrl(undefined)).toBe(false)
+  })
+})
+
+describe('toHttpUrl', () => {
+  it('should return the parsed URL rather than the string it was given', () => {
+    expect(toHttpUrl('https://example.com')).toBe('https://example.com/')
+    expect(toHttpUrl('HTTPS://Example.com/Feed')).toBe('https://example.com/Feed')
+  })
+
+  it('should return undefined for anything that is not http or https', () => {
+    expect(toHttpUrl('javascript:alert(1)')).toBeUndefined()
+    expect(toHttpUrl('data:text/html,<script>alert(1)</script>')).toBeUndefined()
+    expect(toHttpUrl('file:///etc/passwd')).toBeUndefined()
+    expect(toHttpUrl('not a url')).toBeUndefined()
+    expect(toHttpUrl('')).toBeUndefined()
+    expect(toHttpUrl(null)).toBeUndefined()
   })
 })

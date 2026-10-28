@@ -5,7 +5,7 @@ import styles from './APIRequest.module.css'
 import Columns from '@/components/Columns'
 //import JSONLiteral from '@/components/JSONLiteral'
 import Spinner from '@/components/Spinner'
-import { isHttpUrl } from '@/utilities/isHttpUrl'
+import { isHttpUrl, toHttpUrl } from '@/utilities/isHttpUrl'
 
 const RESPONSE_STATUS = {
   INITIAL: 'initial',
@@ -258,23 +258,30 @@ interface MakeRequestProps {
   dispatchRequest?: (q: string) => void
 }
 
-const MakeRequest = ({ query }: MakeRequestProps) => (
-  <div>
-    <h3>Request</h3>
+const MakeRequest = ({ query }: MakeRequestProps) => {
+  // The href is the URL parser's own output, not the string we were handed.
+  // Rendering `query` directly behind a boolean guard is safe at runtime but
+  // leaves the tainted value flowing into the sink, which CodeQL reports and
+  // a reader has to take on trust. See #515.
+  const href = toHttpUrl(query)
 
-    <code className={styles.query}>{query}</code>
+  return (
     <div>
-      {isHttpUrl(query) ? (
-        <>
-          Load the API response&nbsp;
-          <a href={query} target='_blank' rel='noopener noreferrer'>
-            in a new window
-          </a>
-        </>
-      ) : (
-        <>This request cannot be opened: the feed URL is not an http or https address.</>
-      )}
-      {/*
+      <h3>Request</h3>
+
+      <code className={styles.query}>{query}</code>
+      <div>
+        {href ? (
+          <>
+            Load the API response&nbsp;
+            <a href={href} target='_blank' rel='noopener noreferrer'>
+              in a new window
+            </a>
+          </>
+        ) : (
+          <>This request cannot be opened: the feed URL is not an http or https address.</>
+        )}
+        {/*
 				
 				remove pending fix to json component loading
 				
@@ -292,9 +299,10 @@ const MakeRequest = ({ query }: MakeRequestProps) => (
 			)}
 			
 		*/}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 /*
 const Button = ({ dispatchRequest, text, q }) => (
