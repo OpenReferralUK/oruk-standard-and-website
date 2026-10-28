@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './ValidatorForm.module.css'
 import { Button } from '@/components/Button'
+import { isHttpUrl } from '@/utilities/isHttpUrl'
 
 interface ValidatorFormProps {
   initialUrl?: string
@@ -33,10 +34,8 @@ export default function ValidatorForm({
       return
     }
 
-    try {
-      new URL(url)
-    } catch {
-      setError('Please enter a valid URL')
+    if (!isHttpUrl(url)) {
+      setError('Please enter a valid http or https URL')
       return
     }
 
