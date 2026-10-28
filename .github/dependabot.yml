@@ -109,6 +109,22 @@ updates:
     commit-message:
       prefix: 'fix(docker)'
 
+    ignore:
+      # Hold the Node major, and keep taking digest and minor refreshes of the
+      # 22 line - which is the point of the pin, and what actually moves the
+      # OS packages the image is scanned for.
+      #
+      # A major here would put the image ahead of everything else that builds
+      # this project: ci.yml pins NODE_VERSION: '22' for every job, and Vercel
+      # builds production from source on its own Node. Bumping only the Docker
+      # base would mean the security scan no longer describes what is shipped.
+      #
+      # Raising it is a deliberate, coordinated change - NODE_VERSION, this
+      # pin, and the Vercel project setting together - not a weekly PR. See
+      # #505, which proposed 22-alpine to 26-alpine unprompted.
+      - dependency-name: 'node'
+        update-types: ['version-update:semver-major']
+
   # Recommended addition: GitHub Actions (you likely have workflows)
   - package-ecosystem: 'github-actions'
     directory: '/'
