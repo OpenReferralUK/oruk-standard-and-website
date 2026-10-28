@@ -5,6 +5,7 @@ import styles from './APIRequest.module.css'
 import Columns from '@/components/Columns'
 //import JSONLiteral from '@/components/JSONLiteral'
 import Spinner from '@/components/Spinner'
+import { isHttpUrl } from '@/utilities/isHttpUrl'
 
 const RESPONSE_STATUS = {
   INITIAL: 'initial',
@@ -33,6 +34,12 @@ export const APIRequest = ({ src, exampleId, apiPath }: APIRequestProps) => {
     fetchData(q)
   }
   const fetchData = async (q: string) => {
+    // Guarded at the point of use, not only at the form: this value arrives
+    // from the validator response and need not have come from our own input.
+    if (!isHttpUrl(q)) {
+      setStatusError()
+      return
+    }
     try {
       const response = await fetch(q)
       if (!response.ok) {
@@ -257,10 +264,16 @@ const MakeRequest = ({ query }: MakeRequestProps) => (
 
     <code className={styles.query}>{query}</code>
     <div>
-      Load the API response&nbsp;
-      <a href={query} target='_blank'>
-        in a new window
-      </a>
+      {isHttpUrl(query) ? (
+        <>
+          Load the API response&nbsp;
+          <a href={query} target='_blank' rel='noopener noreferrer'>
+            in a new window
+          </a>
+        </>
+      ) : (
+        <>This request cannot be opened: the feed URL is not an http or https address.</>
+      )}
       {/*
 				
 				remove pending fix to json component loading
