@@ -255,6 +255,42 @@ jobs:
         with:
           sarif_file: trivy-image-results.sarif
 
+      # ── TEMPORARY DIAGNOSTIC - remove once #475 is settled ──────────────────
+      # #501 upgraded libssl3/libcrypto3 and #502 deleted npm, both steps ran,
+      # and yet Trivy still reports OpenSSL 3.5.7-r0 and the full npm tree on
+      # main. Two candidate explanations remain and nothing so far separates
+      # them: the image does not contain what the Dockerfile says, or Trivy is
+      # reporting from the base layer / a stale cache rather than the final
+      # filesystem. These two steps settle it in one run.
+      - name: Diagnose image contents
+        run: |
+          echo "::group::Alpine release and OpenSSL packages"
+          docker run --rm --user root oruk-standard-and-website:ci sh -c '
+            echo "alpine-release: $(cat /etc/alpine-release)"
+            apk list --installed 2>/dev/null | grep -E "^(libssl3|libcrypto3)" \
+              || echo "NO libssl3/libcrypto3 ENTRIES FOUND"
+          '
+          echo "::endgroup::"
+          echo "::group::Global node_modules and npm binaries"
+          docker run --rm --user root oruk-standard-and-website:ci sh -c '
+            ls -1 /usr/local/lib/node_modules 2>/dev/null \
+              || echo "/usr/local/lib/node_modules ABSENT"
+            command -v npm npx || echo "npm/npx not on PATH"
+          '
+          echo "::endgroup::"
+
+      # Same image, same Trivy version, but a cache directory that is never
+      # restored by actions/cache. If this disagrees with the SARIF above,
+      # the cache is the culprit; if it agrees, the image is.
+      - name: Trivy image scan with a cold cache (diagnostic)
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: 'oruk-standard-and-website:ci'
+          format: 'table'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '0'
+          cache-dir: .trivycache-cold
+
       - name: Start application container
         run: docker run -d --name test-app -p 3000:3000 oruk-standard-and-website:ci
 
