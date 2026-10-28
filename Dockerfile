@@ -1,5 +1,18 @@
 # Production Dockerfile for ORUK ORUK
-FROM node:22-alpine AS base
+
+# Pinned by digest, not by tag alone. node:22-alpine floats: upstream
+# republished it on 2026-10-22 and moved it from Alpine 3.23 to 3.24 with no
+# PR and no review, which is the realistic route to a broken libc6-compat or
+# native module. Pinning turns that into a Dependabot PR someone reads.
+#
+# It also makes the scan result attributable. While the tag floated there was
+# no way to tell a stale build from an upstream that had not patched yet,
+# because nothing recorded which image had been scanned; a finding that
+# persists against a pinned digest provably means upstream has not fixed it.
+#
+# The tag is kept alongside the digest so Dependabot knows what to track.
+# See #475.
+FROM node:22-alpine@sha256:fe4f6d74e20370acb04ad889077d14d0f64a9c8ea6a42bc60cddf1e844699914 AS base
 
 # Enable Corepack once in the base stage so every derived stage inherits it.
 # Stages do not share state, so enabling it only in deps would leave the
@@ -7,6 +20,19 @@ FROM node:22-alpine AS base
 # once package.json pins packageManager to Yarn 4.
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable
+
+# Upgrade OpenSSL ahead of the base image. node:22-alpine currently ships
+# libssl3/libcrypto3 3.5.7-r0, which Trivy flags for ten CVEs; Alpine has
+# 3.5.8-r0 in its repositories. The tag already floats, so waiting for a
+# newer node:22-alpine achieves nothing until upstream rebuilds - see #475.
+#
+# Named packages rather than a blanket `apk upgrade`: a whole-repo upgrade
+# would make the image's contents vary with Alpine's state rather than with
+# this file, so a build could start failing for reasons absent from the diff.
+#
+# Done in base so every derived stage inherits it. Only the runner stage is
+# scanned, but it derives from here, so this is the single place to fix it.
+RUN apk add --no-cache --upgrade libssl3 libcrypto3
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -52,6 +78,18 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# Remove npm from the runtime image. The standalone server starts with
+# `node server.js` and never shells out to a package manager, so npm is
+# dead weight here - but it is the single largest source of findings in
+# the scan: its vendored dependencies account for 28 of the container's
+# 48 Trivy alerts, including a CRITICAL in tar 7.5.11. Note that copy is
+# npm's own and unrelated to the project's tar, which resolves to 7.5.22.
+#
+# Only the runner stage is stripped. deps and builder keep npm so the
+# package-lock.json fallback branches above still work. See #475.
+RUN rm -rf /usr/local/lib/node_modules/npm \
+    && rm -f /usr/local/bin/npm /usr/local/bin/npx
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs

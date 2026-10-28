@@ -22,16 +22,23 @@ jobs:
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
 
-      - name: Approve & enable auto-merge (safe updates only)
-        if: |
-          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
-          (
-            steps.metadata.outputs.update-type == 'version-update:semver-minor' &&
-            (
-              contains(steps.metadata.outputs.group-name, 'dev') ||
-              contains(steps.metadata.outputs.group-name, 'tooling')
-            )
-          )
+      # Patch updates only.
+      #
+      # The rule here previously also admitted minor updates whose group name
+      # contained 'dev' or 'tooling'. No group is named 'tooling', and of the
+      # seven groups in dependabot.yml only 'dev-and-testing' contains 'dev',
+      # so in practice that clause admitted exactly one thing: minor updates
+      # to Vitest, Playwright, ESLint and TypeScript - the group whose minors
+      # have broken the build before (TypeScript 7 and Vitest 5, see #421).
+      # The exception was pointed at the riskiest group rather than away from
+      # it, and excluding 'dev-and-testing' would have left it matching
+      # nothing at all, so dropping it outright is the same change. See #474.
+      #
+      # For a grouped PR, dependabot/fetch-metadata reports the highest update
+      # type across the group's members, so a group carrying any minor is held
+      # for a human to read. That is the intent, not a side effect.
+      - name: Approve & enable auto-merge (patch updates only)
+        if: steps.metadata.outputs.update-type == 'version-update:semver-patch'
         run: |
           gh pr review --approve "$PR_URL"
           gh pr merge --auto --squash "$PR_URL"
