@@ -128,9 +128,22 @@ jobs:
           languages: javascript-typescript
           build-mode: none
 
+      # An explicit category, deliberately decoupled from the job name. The
+      # default is `<workflow-file>:<job-id>`, and an alert closes only when a
+      # later analysis of the same category omits it - so renaming a job
+      # silently strands every alert raised under the old name, with no error
+      # and nothing in the UI to say so. That is what the #317 refactor did:
+      # 533 analyses orphaned across three categories, holding 49 alerts open
+      # against package versions absent from the repo for weeks. See #514.
+      #
+      # Change these strings only with that cost in mind. Categories must also
+      # stay distinct from one another: two uploads sharing one category on a
+      # single commit overwrite each other.
       - name: Perform CodeQL analysis
         if: matrix.check == 'codeql'
         uses: github/codeql-action/analyze@v4.39.1
+        with:
+          category: codeql
 
       # --- Playwright accessibility ---
       # This leg needs Node and dependencies, so it repeats the Corepack
@@ -204,11 +217,23 @@ jobs:
           severity: 'CRITICAL,HIGH,MEDIUM,UNKNOWN'
           exit-code: '0' # Reported via SARIF; the gatekeeper decides pass/fail
 
+      # An explicit category, deliberately decoupled from the job name. The
+      # default is `<workflow-file>:<job-id>`, and an alert closes only when a
+      # later analysis of the same category omits it - so renaming a job
+      # silently strands every alert raised under the old name, with no error
+      # and nothing in the UI to say so. That is what the #317 refactor did:
+      # 533 analyses orphaned across three categories, holding 49 alerts open
+      # against package versions absent from the repo for weeks. See #514.
+      #
+      # Change these strings only with that cost in mind. Categories must also
+      # stay distinct from one another: two uploads sharing one category on a
+      # single commit overwrite each other.
       - name: Upload Trivy FS SARIF
         if: always() && matrix.check == 'trivy-fs'
         uses: github/codeql-action/upload-sarif@v4.39.1
         with:
           sarif_file: trivy-fs-results.sarif
+          category: trivy-fs
 
   # --- JOB 4: DOCKER IMAGE + DAST ---
   # The image is built and loaded locally rather than pushed to GHCR: nothing
@@ -261,11 +286,23 @@ jobs:
           severity: 'CRITICAL,HIGH,MEDIUM,UNKNOWN'
           exit-code: '0'
 
+      # An explicit category, deliberately decoupled from the job name. The
+      # default is `<workflow-file>:<job-id>`, and an alert closes only when a
+      # later analysis of the same category omits it - so renaming a job
+      # silently strands every alert raised under the old name, with no error
+      # and nothing in the UI to say so. That is what the #317 refactor did:
+      # 533 analyses orphaned across three categories, holding 49 alerts open
+      # against package versions absent from the repo for weeks. See #514.
+      #
+      # Change these strings only with that cost in mind. Categories must also
+      # stay distinct from one another: two uploads sharing one category on a
+      # single commit overwrite each other.
       - name: Upload Trivy image SARIF
         if: always() && hashFiles('trivy-image-results.sarif') != ''
         uses: github/codeql-action/upload-sarif@v4.39.1
         with:
           sarif_file: trivy-image-results.sarif
+          category: trivy-image
 
       - name: Start application container
         run: docker run -d --name test-app -p 3000:3000 oruk-standard-and-website:ci
