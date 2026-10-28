@@ -183,7 +183,18 @@ jobs:
         if: matrix.check == 'trivy-fs'
         uses: actions/cache@v6.1.0
         with:
-          path: .trivycache
+          # Only the `db` subdirectory, which holds the vulnerability database.
+          # Caching the whole of .trivycache also persisted `fanal`, Trivy's
+          # layer analysis cache, and the loose restore-keys below let any
+          # branch's copy be restored over a freshly built image. That is how
+          # the scan came to report OpenSSL 3.5.7-r0 and a full npm tree for an
+          # image that provably contained 3.5.9-r0 and no npm at all - 39
+          # phantom findings on main. See #475.
+          #
+          # The database is the part worth keeping: it is the slow download and
+          # the one that hits registry rate limits. The analysis is cheap and
+          # must never outlive the image it describes.
+          path: .trivycache/db
           key: trivy-db-${{ runner.os }}-${{ github.ref_name }}
           restore-keys: trivy-db-${{ runner.os }}-
 
@@ -235,7 +246,18 @@ jobs:
       - name: Cache Trivy DB
         uses: actions/cache@v6.1.0
         with:
-          path: .trivycache
+          # Only the `db` subdirectory, which holds the vulnerability database.
+          # Caching the whole of .trivycache also persisted `fanal`, Trivy's
+          # layer analysis cache, and the loose restore-keys below let any
+          # branch's copy be restored over a freshly built image. That is how
+          # the scan came to report OpenSSL 3.5.7-r0 and a full npm tree for an
+          # image that provably contained 3.5.9-r0 and no npm at all - 39
+          # phantom findings on main. See #475.
+          #
+          # The database is the part worth keeping: it is the slow download and
+          # the one that hits registry rate limits. The analysis is cheap and
+          # must never outlive the image it describes.
+          path: .trivycache/db
           key: trivy-db-${{ runner.os }}-${{ github.ref_name }}
           restore-keys: trivy-db-${{ runner.os }}-
 
