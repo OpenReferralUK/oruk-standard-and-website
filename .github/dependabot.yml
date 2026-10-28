@@ -90,6 +90,25 @@ updates:
       - dependency-name: 'typescript'
         update-types: ['version-update:semver-major']
 
+  # ── Docker base image ────────────────────────────────────────────────────────
+  # The Dockerfile pins node:22-alpine by digest, so this is what moves the pin
+  # forward. Without it the pin would simply go stale, trading silent drift for
+  # silent staleness. The image is built only by the CI security jobs and is
+  # never pushed or served, so these PRs change the scan surface, not the site.
+  - package-ecosystem: 'docker'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '03:00'
+      timezone: 'Etc/UTC'
+    target-branch: 'staging'
+    labels:
+      - 'dependencies'
+      - 'docker'
+    commit-message:
+      prefix: 'fix(docker)'
+
   # Recommended addition: GitHub Actions (you likely have workflows)
   - package-ecosystem: 'github-actions'
     directory: '/'
