@@ -1,7 +1,7 @@
 ---
 title: Government and community involvement
 slug: For Steering Group members and transparency.
-modified: '2026-06-04T12:06:54.042Z'
+modified: '2026-11-04T12:10:00.042Z'
 ---
 
 # Government and community involvement
@@ -27,8 +27,8 @@ The Ministry of Housing, Communities and Local Government (MHCLG) runs the Cross
 
 Steering Group meetings minutes
 
-- [26 May 2026](/steering/ORUK%20Steering%20Group%2005%20-%20Minutes%20from%2026%20May%202026.pdf) [Annexe A](/steering/ORUK%20Steering%20Group%2005%20-%20Annex%20A%20-%20ORUK%20Away%20Day%20Documentation.pdf)
-
+- [6 October 2026](/steering/ORUK%20Steering%20Group%2006%20-%20Minutes%20from%2006%20Oct%202026.pdf) [Annex A](/steering/ORUK%20Steering%20Group%2006%20-%20Annex%20A%20-%20iStandUK%20and%20Open%20Referral%20UK%20(ORUK)%20Issues%20and%20Opportunities%20September%202026.pdf) [Annex B](/steering/ORUK%20Steering%20Group%2006%20-%20Annex%20B%20-%20Applying%20AI%20to%20Open%20Referral%20UK.pdf) [Annex C](/steering/ORUK%20Steering%20Group%2006%20-%20Annex%20C%20-%20National%20Data%20for%20Local%20Services%20Workshop%20Report.pdf) [Annex D](/steering/ORUK%20Steering%20Group%2006%20-%20Annex%20D%20-%20Health%20and%20Social%20Care%20-%20Open%20Referral%20UK.pdf) [Annex E](/steering/ORUK%20Steering%20Group%2006%20-%20Annex%20E%20-%20Governance%20Model%20for%20the%20UK%20Profile.pdf)
+- [26 May 2026](/steering/ORUK%20Steering%20Group%2005%20-%20Minutes%20from%2026%20May%202026.pdf) [Annex A](/steering/ORUK%20Steering%20Group%2005%20-%20Annex%20A%20-%20ORUK%20Away%20Day%20Documentation.pdf)
 - [3 March 2025](/steering/ORUK%20Steering%20Group%2004%20-%20Minutes%20from%203%20March%202025.pdf) [Annex A](/steering/ORUK%20Steering%20Group%2004%20-%20Annex%20A%20-%20Briefing%20paper%20for%20Steering%20Group%20Meeting%204.pdf) [Annex B](/steering/ORUK%20Steering%20Group%2004%20-%20Annex%20B%20-%20Shared%20-%20Scoping%20Funding%20and%20Commercial%20Structure%20Options%20for%20ORUK.pdf)
 - [2 December 2024](/steering/ORUK%20Steering%20Group%2003%20-%20Minutes%20from%20%202%20December%202024.pdf) [Annex A](/steering/ORUK%20Steering%20Group%2003%20-%20Annex%20A%20-%20Presentation%20on%20taxonomies.pdf)
 - [9 September 2024](/steering/ORUK%20Steering%20Group%2002%20-%20Minutes%20from%209%20September%202024.pdf) [Annex A](/steering/ORUK%20Steering%20Group%2002%20-%20Annex%20A%20-%20DfE%20Family%20Hubs%20presentation.pdf) [Annex B](/steering/ORUK%20Steering%20Group%2002%20-%20Annex%20B%20-%20Lancs%20and%20South%20Cumbria%20health%20and%20care%20%20presentation.pdf)
