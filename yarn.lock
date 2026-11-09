@@ -1003,9 +1003,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microlink/react-json-view@npm:^1.31.43":
-  version: 1.31.43
-  resolution: "@microlink/react-json-view@npm:1.31.43"
+"@microlink/react-json-view@npm:^1.31.48":
+  version: 1.31.48
+  resolution: "@microlink/react-json-view@npm:1.31.48"
   dependencies:
     react-base16-styling: "npm:~0.10.0"
     react-lifecycles-compat: "npm:~3.0.4"
@@ -1013,7 +1013,7 @@ __metadata:
   peerDependencies:
     react: ">= 15"
     react-dom: ">= 15"
-  checksum: 10c0/8b848e1703210daf6e8a45ab9502b24649ceb9514cffadafd87eaa9d4767307549b9fa3d8f9790e878867a3a4a89744828b7d5981be2a1832d1adf983326a0c2
+  checksum: 10c0/66a77e13e96b2ac5ab7c056906ff03211ea4487a8f164edcfe15277c5e77f0479af99a746149c3b5c3872f4997d1ea2a1b5a69c1f7cb8629b4fb869c6af2c37b
   languageName: node
   linkType: hard
 
@@ -5448,7 +5448,7 @@ __metadata:
   dependencies:
     "@axe-core/playwright": "npm:^4.14.0"
     "@eslint/js": "npm:^10.0.1"
-    "@microlink/react-json-view": "npm:^1.31.43"
+    "@microlink/react-json-view": "npm:^1.31.48"
     "@next/eslint-plugin-next": "npm:^16.4.3"
     "@octokit/auth-app": "npm:^8.3.1"
     "@playwright/test": "npm:^1.64.1"
