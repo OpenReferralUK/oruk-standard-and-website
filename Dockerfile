@@ -21,18 +21,26 @@ FROM node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15
 ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
 RUN corepack enable
 
-# Upgrade OpenSSL ahead of the base image. node:22-alpine currently ships
-# libssl3/libcrypto3 3.5.7-r0, which Trivy flags for ten CVEs; Alpine has
-# 3.5.8-r0 in its repositories. The tag already floats, so waiting for a
-# newer node:22-alpine achieves nothing until upstream rebuilds - see #475.
+# Upgrade the OS packages ahead of the base image. Alpine publishes fixes
+# faster than the Node images are rebuilt, so the image as pulled is routinely
+# behind its own distribution: libssl3/libcrypto3 were 3.5.7-r0 against an
+# available 3.5.8-r0 (#501), and zlib is 1.3.2-r1 against an available 1.4-r0
+# (CVE-2026-4738) even on the digest Dependabot bumped to in #535.
 #
-# Named packages rather than a blanket `apk upgrade`: a whole-repo upgrade
-# would make the image's contents vary with Alpine's state rather than with
-# this file, so a build could start failing for reasons absent from the diff.
+# This upgrades every installed package rather than a named list. #501 named
+# libssl3 and libcrypto3 deliberately, so that image contents varied with this
+# file rather than with Alpine's repository state - but #503 then pinned the
+# base by digest, which supplies that reproducibility independently. With the
+# base fixed, the only remaining variance is Alpine's own package versions,
+# and the alternative is a Dockerfile edit for every new CVE in a package
+# nobody thought to list. zlib was the second.
+#
+# The image is built only by the CI security jobs and is never pushed or
+# served, so the worst case is a failed Docker & ZAP Scan check on a PR.
 #
 # Done in base so every derived stage inherits it. Only the runner stage is
 # scanned, but it derives from here, so this is the single place to fix it.
-RUN apk add --no-cache --upgrade libssl3 libcrypto3
+RUN apk upgrade --no-cache
 
 # Install dependencies only when needed
 FROM base AS deps
