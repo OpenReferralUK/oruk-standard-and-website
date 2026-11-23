@@ -12,7 +12,7 @@
 #
 # The tag is kept alongside the digest so Dependabot knows what to track.
 # See #475.
-FROM node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 AS base
+FROM node:22-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a AS base
 
 # Enable Corepack once in the base stage so every derived stage inherits it.
 # Stages do not share state, so enabling it only in deps would leave the
