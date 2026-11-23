@@ -3782,9 +3782,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-react-parser@npm:^6.1.9":
-  version: 6.1.9
-  resolution: "html-react-parser@npm:6.1.9"
+"html-react-parser@npm:^6.1.10":
+  version: 6.1.10
+  resolution: "html-react-parser@npm:6.1.10"
   dependencies:
     domhandler: "npm:6.0.1"
     html-dom-parser: "npm:8.0.2"
@@ -3796,7 +3796,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/9cc13b894a72b38a7685a925b90b964e934f22e5d61acbf4bff0716e5a5412b206a39dd2f0e9a275a3229834dcf937cd065763ecaa2fd843a2f0b12723761ebd
+  checksum: 10c0/79a6051c15519f391f7cf85100f1e8d4fc620261b011c0fb50041e350b03b1349067f7a8e3caacbea6193d0465ba801649fa0a47a4876017152987be0ac6af63
   languageName: node
   linkType: hard
 
@@ -4555,12 +4555,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^18.2.0":
-  version: 18.2.0
-  resolution: "marked@npm:18.2.0"
+"marked@npm:^18.2.1":
+  version: 18.2.1
+  resolution: "marked@npm:18.2.1"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/7766e5564cc6dbe3e8d6ee0091f3a4656002dd993817e68c5510e2ff1fa1d6456c9bcd18af1a4a5e8ea87382832a07026c109ab333913f125d51c93f29ba9017
+  checksum: 10c0/6b266b2b20b2cc7e4275087f6c32f8a1b7f9ce5e73e233a4f46614a59617b7afc8d613bbcb57bacaea5da8f6ad5a830fe10384564106d2d1afb354ba1b0bb9e0
   languageName: node
   linkType: hard
 
@@ -5464,12 +5464,12 @@ __metadata:
     eslint-plugin-react: "npm:^7.37.5"
     eslint-plugin-react-hooks: "npm:^7.1.1"
     gray-matter: "npm:^4.0.3"
-    html-react-parser: "npm:^6.1.9"
+    html-react-parser: "npm:^6.1.10"
     husky: "npm:^9.1.7"
     js-yaml: "npm:^5.5.0"
     jsdom: "npm:^31.0.0"
     lint-staged: "npm:^17.6.0"
-    marked: "npm:^18.2.0"
+    marked: "npm:^18.2.1"
     mongodb: "npm:^7.9.0"
     next: "npm:^16.4.6"
     octokit: "npm:^5.0.5"
